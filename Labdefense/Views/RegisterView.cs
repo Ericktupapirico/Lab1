@@ -1,4 +1,5 @@
 ﻿using Labdefense.Models;
+using Labdefense.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,33 +14,35 @@ namespace Labdefense.Views
 {
     public partial class RegisterView : Form
     {
-
-
+        private StudentsManager studentsManager;
+        private Student[] students;
         public RegisterView()
         {
             InitializeComponent();
+            studentsManager = new StudentsManager(students); 
+
+
         }
 
-        Student[] students;
-        int Quantity;
+
 
         void RegisterStudents()
         {
 
 
-            Array.Resize(ref students, Quantity + 1);
-            students[Quantity] = new Student();
+            Student student = new Student()
+            {
+                id = 1,
+                name = textName.Text,
+                surname = textSurname.Text,
+                Number = textNum.Text,
+                carnet = textCarnet.Text,
+                identifiaction = textIdentification.Text,
+                dateRegister = dateTimePicker1.Value
+                
+            };
 
-
-            students[Quantity].name = textName.Text;
-            students[Quantity].surname = textSurname.Text;
-            students[Quantity].carnet = textCarnet.Text;
-            students[Quantity].identifiaction = textIdentification.Text;
-            students[Quantity].Number = textNum.Text;
-            students[Quantity].dateRegister = dateTimePicker1.Value;
-            students[Quantity].id = Quantity + 1;
-            ++Quantity;
-
+            studentsManager.AddStudent(student);
 
             MessageBox.Show("Persona Ingresada Correctamente");
 
@@ -58,12 +61,13 @@ namespace Labdefense.Views
             RegisterStudents();
 
            
-            dgStudents.DataSource = students;
+            dgStudents.DataSource = studentsManager.GetStudents();
             dgStudents.Columns["IPar"].Visible = false;
             dgStudents.Columns["IIPar"].Visible = false;
             dgStudents.Columns["project"].Visible = false;
-            Form1 form1 = new Form1(ref students);
-
+           
+            
+           
         }
 
         private void textName_TextChanged(object sender, EventArgs e)

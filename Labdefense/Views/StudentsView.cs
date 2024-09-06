@@ -13,16 +13,16 @@ namespace Labdefense.Views
 {
     public partial class StudentsView : Form
     {
-        public Student[] students;
-        public StudentsView(ref Student[] students)
+   
+        public StudentsView()
         {
             InitializeComponent();
-            this.students = students;
+         
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgPrint.DataSource = students;
+            
         }
     }
 }

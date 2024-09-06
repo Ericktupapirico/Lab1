@@ -5,12 +5,13 @@ namespace Labdefense
 {
     public partial class Form1 : Form
     {
-        public Student[] students;
-        public Form1(ref Student[] students)
+     
+        public Form1()
         {
             InitializeComponent();
-            this.students = students; 
+        
         }
+      
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -63,7 +64,7 @@ namespace Labdefense
 
         private void btnGrades_Click(object sender, EventArgs e)
         {
-            OpenForms(form: new GradesView(ref students));
+            OpenForms(form: new GradesView());
         }
 
         private void btnPayments_Click(object sender, EventArgs e)
@@ -78,7 +79,7 @@ namespace Labdefense
 
         private void btnStudents_Click(object sender, EventArgs e)
         {
-            OpenForms(form: new StudentsView(ref students));
+            OpenForms(form: new StudentsView());
         }
     }
 }

@@ -13,8 +13,8 @@ namespace Labdefense.Views
 {
     public partial class GradesView : Form
     {
-        public Student[] students;
-        public GradesView(ref Student[] students)
+   
+        public GradesView()
         {
             InitializeComponent();
         }
