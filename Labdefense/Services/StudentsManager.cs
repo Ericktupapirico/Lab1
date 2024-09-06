@@ -47,5 +47,10 @@ namespace Labdefense.Services
                     }
             }
         }
+
+        public int GetNextId()
+        {
+            return students.Length > 0 ? students.Max(s => s.id) + 1 : 1 ;
+        }
     }
 }

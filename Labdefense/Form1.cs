@@ -5,10 +5,11 @@ namespace Labdefense
 {
     public partial class Form1 : Form
     {
-     
+ 
         public Form1()
         {
             InitializeComponent();
+        
         
         }
       
@@ -58,7 +59,11 @@ namespace Labdefense
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
-        {
+
+        {  
+          
+
+
             OpenForms(form: new RegisterView());
         }
 

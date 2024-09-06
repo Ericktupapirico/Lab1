@@ -19,8 +19,9 @@ namespace Labdefense.Views
         public RegisterView()
         {
             InitializeComponent();
-            studentsManager = new StudentsManager(students); 
-
+            
+            studentsManager = new StudentsManager(students);
+           
 
         }
 
@@ -32,7 +33,7 @@ namespace Labdefense.Views
 
             Student student = new Student()
             {
-                id = 1,
+                id = studentsManager.GetNextId(),
                 name = textName.Text,
                 surname = textSurname.Text,
                 Number = textNum.Text,
