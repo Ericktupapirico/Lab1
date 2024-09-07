@@ -12,7 +12,7 @@ namespace Labdefense
 
             students = new Student[] { };
         }
-      
+
 
         private void Form1_Load(object sender, EventArgs e)
         {

@@ -24,17 +24,17 @@ namespace Labdefense.Util
                 }
                 else
                 {
-                    errorProvider.SetError(txt, ""); 
+                    errorProvider.SetError(txt, "");
                 }
             }
 
             if (TextNull)
             {
-               
+
                 System.Media.SystemSounds.Exclamation.Play();
             }
 
-            return TextNull ;
+            return TextNull;
         }
 
         public bool IsValidId(TextBox[] identification)
@@ -43,7 +43,7 @@ namespace Labdefense.Util
             string pattern = @"^\d{3}-\d{6}-\d{4}[A-Z]$";
 
             Regex regex = new Regex(pattern);
-              foreach (TextBox txt in identification)
+            foreach (TextBox txt in identification)
             {
                 if (!regex.IsMatch(txt.Text))
                 {
@@ -54,7 +54,7 @@ namespace Labdefense.Util
                 {
                     errorProvider.SetError(txt, "");
                 }
-            
+
             }
             if (idWrong)
             {
@@ -108,7 +108,7 @@ namespace Labdefense.Util
             string currentText = textBox.Text;
 
 
-           
+
             if (!char.IsDigit(ch) && ch != '.')
             {
                 e.Handled = true;
@@ -134,9 +134,9 @@ namespace Labdefense.Util
                     textBox.SelectionStart = textBox.Text.Length;
                 }
             }
-           
 
-            }
+
+        }
 
         public bool NumberValif(TextBox[] Num)
         {
@@ -165,10 +165,10 @@ namespace Labdefense.Util
 
             return numwrong;
         }
-        }
-
     }
-       
 
-        
-    
+}
+
+
+
+

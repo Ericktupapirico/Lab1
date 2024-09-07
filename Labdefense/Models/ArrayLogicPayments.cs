@@ -34,7 +34,7 @@ namespace Labdefense.Models
 
         public bool RemoveStudent(string Carnet)
         {
-            var index = Array.FindIndex(_payments,p => Carnet.Equals(p.Carnet));
+            var index = Array.FindIndex(_payments, p => Carnet.Equals(p.Carnet));
             if (index < 0) return false;
             for (int i = index; i < quantity - 1; i++)
             {
@@ -57,7 +57,7 @@ namespace Labdefense.Models
             return true;
         }
 
-       
+
         public Payments[] SearchStudent(string carnet)
         {
 

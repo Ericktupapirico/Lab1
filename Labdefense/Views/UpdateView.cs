@@ -93,22 +93,22 @@ namespace Labdefense.Views
 
         private void texPar1_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
         }
 
         private void textPar2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void textPro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void textTest_KeyPress(object sender, KeyPressEventArgs e)
         {
-         
+
         }
 
         private void textPro_TextChanged(object sender, EventArgs e)

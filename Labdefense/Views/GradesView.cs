@@ -107,6 +107,6 @@ namespace Labdefense.Views
             PrintStudents();
         }
 
-       
+
     }
 }

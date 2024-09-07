@@ -32,12 +32,12 @@ namespace Labdefense.Views
             dgStudents.DataSource = ArrayLogic.Arraylog.GetStudents();
 
 
-           
-                dgStudents.Columns["IPar"].Visible = false;
-           
-                dgStudents.Columns["IIPar"].Visible = false;
-          
-                dgStudents.Columns["project"].Visible = false;
+
+            dgStudents.Columns["IPar"].Visible = false;
+
+            dgStudents.Columns["IIPar"].Visible = false;
+
+            dgStudents.Columns["project"].Visible = false;
         }
 
 
@@ -47,15 +47,15 @@ namespace Labdefense.Views
 
             Student student = new Student
             {
-             
+
                 name = textName.Text,
                 surname = textSurname.Text,
                 Number = textNumMask.Text,
                 carnet = textCarnet.Text,
                 identification = textIdentification.Text,
                 dateRegister = dateTimePicker1.Value,
-                
-               
+
+
             };
 
             ArrayLogic.Arraylog.AddStudent(student);

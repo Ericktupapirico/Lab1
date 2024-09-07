@@ -8,7 +8,7 @@ namespace Labdefense.Models
 {
     public class Student
     {
-  
+
         public string? name { get; set; }
         public string? surname { get; set; }
         public string? carnet { get; set; }
@@ -18,16 +18,16 @@ namespace Labdefense.Models
         public float IPar { get; set; }
         public float IIPar { get; set; }
         public float project { get; set; }
-    
+
         public float test { get; set; }
         public float Finalgrades { get; set; }
         public float finalgrades()
-        {  
-            
-             if(IPar > 30)
+        {
+
+            if (IPar > 30)
             {
                 MessageBox.Show("Nota: " + project + " Invalido");
-                    IPar = 0; 
+                IPar = 0;
             }
 
             if (IIPar > 30)
