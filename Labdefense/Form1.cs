@@ -28,16 +28,6 @@ namespace Labdefense
             form.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
-
-            if (parameter != null)
-            {
-                var type = formHijo.GetType();
-                var property = type.GetProperty("Parameter");
-                if (property != null)
-                {
-                    property.SetValue(formHijo, parameter);
-                }
-            }
             PanelFather.Controls.Add(formHijo);
             formHijo.Show();
         }
