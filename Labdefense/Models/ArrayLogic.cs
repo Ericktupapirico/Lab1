@@ -38,8 +38,6 @@ namespace Labdefense.Models
                 {
                     if (students[j].Finalgrades < students[j + 1].Finalgrades)
                     {
-
-
                         Student BestGrades = students[j];
                         students[j] = students[j + 1];
                         students[j + 1] = BestGrades;
