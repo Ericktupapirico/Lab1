@@ -18,7 +18,7 @@ namespace Labdefense
         {
 
         }
-        void OpenForms(Form form, object parameter = null)
+        void OpenForms(Form form)
         {
             while (PanelFather.Controls.Count > 0)
             {
@@ -68,7 +68,7 @@ namespace Labdefense
 
 
 
-            OpenForms(new RegisterView(students));
+            OpenForms(new RegisterView());
         }
 
         private void btnGrades_Click(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace Labdefense
 
         private void btnStudents_Click(object sender, EventArgs e)
         {
-            OpenForms(form: new StudentsView(students));
+            OpenForms(form: new StudentsView());
         }
     }
 }

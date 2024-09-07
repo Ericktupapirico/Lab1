@@ -1,5 +1,5 @@
 ﻿using Labdefense.Models;
-using Labdefense.Services;
+using Labdefense.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,63 +9,97 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Labdefense.Views
 {
     public partial class RegisterView : Form
     {
-        private StudentsManager studentsManager;
+        private Validations validations;
 
-        public Student[] students;
-        public RegisterView(Student[] initialStudents)
+        public Student? students;
+        public RegisterView()
         {
             InitializeComponent();
-            this.students = initialStudents;
-            studentsManager = new StudentsManager(students);
-
+            validations = new Validations();
+            errorProvider1 = new ErrorProvider();
 
         }
 
+        private void PrintStudents()
+        {
+            dgStudents.DataSource = null;
+            dgStudents.DataSource = ArrayLogic.Arraylog.GetStudents();
+
+
+           
+                dgStudents.Columns["IPar"].Visible = false;
+           
+                dgStudents.Columns["IIPar"].Visible = false;
+          
+                dgStudents.Columns["project"].Visible = false;
+        }
 
 
         void RegisterStudents()
         {
 
 
-            Student student = new Student()
+            Student student = new Student
             {
-                id = studentsManager.GetNextId(),
+             
                 name = textName.Text,
                 surname = textSurname.Text,
-                Number = textNum.Text,
+                Number = textNumMask.Text,
                 carnet = textCarnet.Text,
-                identifiaction = textIdentification.Text,
-                dateRegister = dateTimePicker1.Value
-
+                identification = textIdentification.Text,
+                dateRegister = dateTimePicker1.Value,
+                
+               
             };
-            if (Owner is Form1 form1)
-            {
-                form1.UpdateStudents(studentsManager.GetStudents());
-            }
-            studentsManager.AddStudent(student);
 
-            MessageBox.Show("Persona Ingresada Correctamente");
-
-
+            ArrayLogic.Arraylog.AddStudent(student);
 
         }
 
         private void RegisterView_Load(object sender, EventArgs e)
         {
+            PrintStudents();
         }
 
 
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            RegisterStudents();
 
-          
+            TextBox[] textBoxes = { textCarnet, textSurname, textName, textIdentification };
+            TextBox[] textBid = { textIdentification };
+            TextBox[] _textCarnet = { textCarnet };
+
+            if (validations.IsValidCarnet(_textCarnet))
+            {
+                MessageBox.Show("Por favor, ingrese un carnet valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (validations.IsValidId(textBid))
+            {
+                MessageBox.Show("Por favor, ingrese un id valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (validations.TextNullEmpty(textBoxes))
+            {
+                MessageBox.Show("Por favor, rellena todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!textNumMask.MaskFull)
+            {
+                errorProvider1.SetError(textNumMask, "Numero incompleto");
+                return;
+            }
+
+            RegisterStudents();
+            PrintStudents();
+
 
         }
 
@@ -76,11 +110,12 @@ namespace Labdefense.Views
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            dgStudents.DataSource = null;
-            dgStudents.DataSource = studentsManager.GetStudents();
-            dgStudents.Columns["IPar"].Visible = false;
-            dgStudents.Columns["IIPar"].Visible = false;
-            dgStudents.Columns["project"].Visible = false;
+
+
+        }
+
+        private void dgStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

@@ -1,5 +1,5 @@
 ﻿using Labdefense.Models;
-using Labdefense.Services;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,24 +14,99 @@ namespace Labdefense.Views
 {
     public partial class StudentsView : Form
     {
-        private StudentsManager studentsManager;
+
         public Student[] students;
-        public StudentsView(Student[] initialStudents)
+        public StudentsView()
         {
-           
-           InitializeComponent();
-            this.students = initialStudents  ?? new Student[0];
-           studentsManager = new StudentsManager(students);
+
+            InitializeComponent();
+
+
+        }
+        private void PrintStudents()
+        {
+            dgPrint.DataSource = null;
+            dgPrint.DataSource = ArrayLogic.Arraylog.GetStudents();
+
+
+        }
+
+        private void StudentsView_Load(object sender, EventArgs e)
+        {
+            PrintStudents();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            if (dgPrint.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("No se seleccionado un estudiante", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            var IndexSelectDg = dgPrint.SelectedRows[0].Index;
+            if (dgPrint.Rows[IndexSelectDg].DataBoundItem is not Student studentselect)
+            {
+                MessageBox.Show("No se seleccionado un estudiante", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(studentselect.carnet))
+            {
+                MessageBox.Show("No se ha encontrado el carnet estudiantil", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
+            var resulMessage = MessageBox.Show("Seguro que quiere eliminar a " + studentselect.name + " " + studentselect.surname, "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (resulMessage == DialogResult.No)
+            {
+                return;
+            }
+            ArrayLogic.Arraylog.RemoveStudent(studentselect.carnet);
+            dgPrint.DataSource = null;
+            dgPrint.DataSource = ArrayLogic.Arraylog.GetStudents();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+
+        {
+
+            if (dgPrint.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("No se seleccionado un estudiante", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            var IndexSelectDg = dgPrint.SelectedRows[0].Index;
+            if (dgPrint.Rows[IndexSelectDg].DataBoundItem is not Student studentselect)
+            {
+                MessageBox.Show("No se seleccionado un estudiante", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            UpdateView updateView = new UpdateView(studentselect);
+            updateView.OnDataUpdate += PrintStudents;
+            updateView.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var studentsList = studentsManager.GetStudents();
-            MessageBox.Show($"Number of students: {studentsList.Length}");
+            var Carnet = textSearch.Text;
+            var _students = ArrayLogic.Arraylog.SearchStudent(Carnet);
 
-            dgPrint.DataSource = null;
-            dgPrint.DataSource = studentsList;
+            if (_students.Length > 0)
+            {
+                dgPrint.DataSource = _students;
+            }
+            else
+            {
+                MessageBox.Show("No se encontro al estudiante con carnet:" + Carnet, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
+        private void textSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

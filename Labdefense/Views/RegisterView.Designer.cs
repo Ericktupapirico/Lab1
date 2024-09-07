@@ -1,4 +1,6 @@
-﻿namespace Labdefense.Views
+﻿using System.Windows.Forms;
+
+namespace Labdefense.Views
 {
     partial class RegisterView
     {
@@ -28,11 +30,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             dgStudents = new DataGridView();
             textName = new TextBox();
             textSurname = new TextBox();
             textIdentification = new TextBox();
-            textNum = new TextBox();
             textCarnet = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             label1 = new Label();
@@ -42,8 +44,10 @@
             label5 = new Label();
             label6 = new Label();
             btnRegister = new Button();
-            btnPrint = new Button();
+            textNumMask = new MaskedTextBox();
+            errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)dgStudents).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // dgStudents
@@ -52,8 +56,10 @@
             dgStudents.Location = new Point(12, 288);
             dgStudents.Name = "dgStudents";
             dgStudents.RowHeadersWidth = 51;
+            dgStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgStudents.Size = new Size(1009, 188);
             dgStudents.TabIndex = 0;
+            dgStudents.CellContentClick += dgStudents_CellContentClick;
             // 
             // textName
             // 
@@ -76,13 +82,6 @@
             textIdentification.Name = "textIdentification";
             textIdentification.Size = new Size(125, 27);
             textIdentification.TabIndex = 3;
-            // 
-            // textNum
-            // 
-            textNum.Location = new Point(116, 174);
-            textNum.Name = "textNum";
-            textNum.Size = new Size(125, 27);
-            textNum.TabIndex = 4;
             // 
             // textCarnet
             // 
@@ -162,22 +161,24 @@
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += btnRegister_Click;
             // 
-            // btnPrint
+            // textNumMask
             // 
-            btnPrint.Location = new Point(674, 115);
-            btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(125, 29);
-            btnPrint.TabIndex = 14;
-            btnPrint.Text = "Show Register";
-            btnPrint.UseVisualStyleBackColor = true;
-            btnPrint.Click += btnPrint_Click;
+            textNumMask.Location = new Point(116, 167);
+            textNumMask.Mask = "0000-0000";
+            textNumMask.Name = "textNumMask";
+            textNumMask.Size = new Size(61, 27);
+            textNumMask.TabIndex = 14;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // RegisterView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1033, 555);
-            Controls.Add(btnPrint);
+            Controls.Add(textNumMask);
             Controls.Add(btnRegister);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -187,7 +188,6 @@
             Controls.Add(label1);
             Controls.Add(dateTimePicker1);
             Controls.Add(textCarnet);
-            Controls.Add(textNum);
             Controls.Add(textIdentification);
             Controls.Add(textSurname);
             Controls.Add(textName);
@@ -196,6 +196,7 @@
             Text = "RegisterView";
             Load += RegisterView_Load;
             ((System.ComponentModel.ISupportInitialize)dgStudents).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -206,7 +207,6 @@
         private TextBox textName;
         private TextBox textSurname;
         private TextBox textIdentification;
-        private TextBox textNum;
         private TextBox textCarnet;
         private DateTimePicker dateTimePicker1;
         private Label label1;
@@ -216,6 +216,7 @@
         private Label label5;
         private Label label6;
         private Button btnRegister;
-        private Button btnPrint;
+        private MaskedTextBox textNumMask;
+        private ErrorProvider errorProvider1;
     }
 }
