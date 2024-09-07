@@ -10,6 +10,11 @@ namespace Labdefense.Services
     public class StudentsManager
     {
         private Student[] students;
+
+        public StudentsManager()
+        {
+            students = new Student[0]; 
+        }
         public StudentsManager(Student[] studentsInitial) {
             students = new Student[studentsInitial.Length];
             Array.Copy(studentsInitial, students, studentsInitial.Length);
@@ -27,7 +32,7 @@ namespace Labdefense.Services
         {
             Student[] newstudents = new Student[students.Length + 1];
             Array.Copy(students, newstudents, students.Length);
-            newstudents[newstudents.Length] = newstudent;
+            newstudents[newstudents.Length - 1] = newstudent;
             students = newstudents;
 
         }

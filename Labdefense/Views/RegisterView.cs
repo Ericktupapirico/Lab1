@@ -61,7 +61,7 @@ namespace Labdefense.Views
         {
             RegisterStudents();
 
-           
+            dgStudents.DataSource = null;
             dgStudents.DataSource = studentsManager.GetStudents();
             dgStudents.Columns["IPar"].Visible = false;
             dgStudents.Columns["IIPar"].Visible = false;
