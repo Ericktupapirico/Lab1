@@ -42,6 +42,7 @@
             label5 = new Label();
             label6 = new Label();
             btnRegister = new Button();
+            btnPrint = new Button();
             ((System.ComponentModel.ISupportInitialize)dgStudents).BeginInit();
             SuspendLayout();
             // 
@@ -161,11 +162,22 @@
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += btnRegister_Click;
             // 
+            // btnPrint
+            // 
+            btnPrint.Location = new Point(674, 115);
+            btnPrint.Name = "btnPrint";
+            btnPrint.Size = new Size(125, 29);
+            btnPrint.TabIndex = 14;
+            btnPrint.Text = "Show Register";
+            btnPrint.UseVisualStyleBackColor = true;
+            btnPrint.Click += btnPrint_Click;
+            // 
             // RegisterView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1033, 555);
+            Controls.Add(btnPrint);
             Controls.Add(btnRegister);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -204,5 +216,6 @@
         private Label label5;
         private Label label6;
         private Button btnRegister;
+        private Button btnPrint;
     }
 }

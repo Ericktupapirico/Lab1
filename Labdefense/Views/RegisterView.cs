@@ -22,7 +22,7 @@ namespace Labdefense.Views
             InitializeComponent();
             this.students = initialStudents;
             studentsManager = new StudentsManager(students);
-           
+
 
         }
 
@@ -41,7 +41,7 @@ namespace Labdefense.Views
                 carnet = textCarnet.Text,
                 identifiaction = textIdentification.Text,
                 dateRegister = dateTimePicker1.Value
-                
+
             };
 
             studentsManager.AddStudent(student);
@@ -62,18 +62,22 @@ namespace Labdefense.Views
         {
             RegisterStudents();
 
+          
+
+        }
+
+        private void textName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
             dgStudents.DataSource = null;
             dgStudents.DataSource = studentsManager.GetStudents();
             dgStudents.Columns["IPar"].Visible = false;
             dgStudents.Columns["IIPar"].Visible = false;
             dgStudents.Columns["project"].Visible = false;
-           
-            
-           
-        }
-
-        private void textName_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }
