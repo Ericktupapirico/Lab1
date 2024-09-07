@@ -15,12 +15,13 @@ namespace Labdefense.Views
     public partial class RegisterView : Form
     {
         private StudentsManager studentsManager;
-        private Student[] students;
+
+        public Student[] students;
         public RegisterView()
         {
             InitializeComponent();
-            
-            studentsManager = new StudentsManager();
+            this.students = students;
+            studentsManager = new StudentsManager(students);
            
 
         }

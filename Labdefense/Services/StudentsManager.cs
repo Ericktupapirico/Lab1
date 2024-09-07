@@ -11,10 +11,7 @@ namespace Labdefense.Services
     {
         private Student[] students;
 
-        public StudentsManager()
-        {
-            students = new Student[0]; 
-        }
+    
         public StudentsManager(Student[] studentsInitial) {
             students = new Student[studentsInitial.Length];
             Array.Copy(studentsInitial, students, studentsInitial.Length);

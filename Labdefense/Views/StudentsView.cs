@@ -15,10 +15,12 @@ namespace Labdefense.Views
     public partial class StudentsView : Form
     {
         private StudentsManager studentsManager;
+        public Student[] students;
         public StudentsView()
         {
             InitializeComponent();
-            studentsManager = new StudentsManager();
+            this.students = students;
+            studentsManager = new StudentsManager(students);
         }
 
         private void button1_Click(object sender, EventArgs e)
