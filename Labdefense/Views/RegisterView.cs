@@ -20,7 +20,7 @@ namespace Labdefense.Views
         {
             InitializeComponent();
             
-            studentsManager = new StudentsManager(students);
+            studentsManager = new StudentsManager();
            
 
         }
