@@ -16,11 +16,12 @@ namespace Labdefense.Views
     {
         private StudentsManager studentsManager;
         public Student[] students;
-        public StudentsView()
+        public StudentsView(Student[] initialStudents)
         {
-            InitializeComponent();
-            this.students = students;
-            studentsManager = new StudentsManager(students);
+           
+           InitializeComponent();
+            this.students = initialStudents ?? new Student[0];
+           studentsManager = new StudentsManager(students);
         }
 
         private void button1_Click(object sender, EventArgs e)

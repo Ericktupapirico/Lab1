@@ -17,10 +17,10 @@ namespace Labdefense.Views
         private StudentsManager studentsManager;
 
         public Student[] students;
-        public RegisterView()
+        public RegisterView(Student[] initialStudents)
         {
             InitializeComponent();
-            this.students = students;
+            this.students = initialStudents;
             studentsManager = new StudentsManager(students);
            
 

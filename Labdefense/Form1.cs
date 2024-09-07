@@ -5,12 +5,12 @@ namespace Labdefense
 {
     public partial class Form1 : Form
     {
- 
+        private Student[] students;
         public Form1()
         {
             InitializeComponent();
-        
-        
+
+            students = new Student[] { };
         }
       
 
@@ -18,7 +18,7 @@ namespace Labdefense
         {
 
         }
-        void OpenForms(Form form)
+        void OpenForms(Form form, object parameter = null)
         {
             while (PanelFather.Controls.Count > 0)
             {
@@ -28,6 +28,16 @@ namespace Labdefense
             form.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
+
+            if (parameter != null)
+            {
+                var type = formHijo.GetType();
+                var property = type.GetProperty("Parameter");
+                if (property != null)
+                {
+                    property.SetValue(formHijo, parameter);
+                }
+            }
             PanelFather.Controls.Add(formHijo);
             formHijo.Show();
         }
@@ -60,11 +70,11 @@ namespace Labdefense
 
         private void btnRegister_Click(object sender, EventArgs e)
 
-        {  
-          
+        {
 
 
-            OpenForms(form: new RegisterView());
+
+            OpenForms(new RegisterView(students));
         }
 
         private void btnGrades_Click(object sender, EventArgs e)
@@ -84,7 +94,7 @@ namespace Labdefense
 
         private void btnStudents_Click(object sender, EventArgs e)
         {
-            OpenForms(form: new StudentsView());
+            OpenForms(form: new StudentsView(students));
         }
     }
 }
