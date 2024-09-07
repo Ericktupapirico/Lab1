@@ -20,14 +20,18 @@ namespace Labdefense.Views
         {
            
            InitializeComponent();
-            this.students = initialStudents ?? new Student[0];
+            this.students = initialStudents  ?? new Student[0];
            studentsManager = new StudentsManager(students);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgPrint.DataSource = null; 
-          dgPrint.DataSource =  studentsManager.GetStudents();
+            var studentsList = studentsManager.GetStudents();
+            MessageBox.Show($"Number of students: {studentsList.Length}");
+
+            dgPrint.DataSource = null;
+            dgPrint.DataSource = studentsList;
         }
+
     }
 }

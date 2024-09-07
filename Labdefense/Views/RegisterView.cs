@@ -43,7 +43,10 @@ namespace Labdefense.Views
                 dateRegister = dateTimePicker1.Value
 
             };
-
+            if (Owner is Form1 form1)
+            {
+                form1.UpdateStudents(studentsManager.GetStudents());
+            }
             studentsManager.AddStudent(student);
 
             MessageBox.Show("Persona Ingresada Correctamente");
