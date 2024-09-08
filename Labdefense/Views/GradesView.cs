@@ -70,7 +70,7 @@ namespace Labdefense.Views
                 return;
             }
 
-            if (string.IsNullOrEmpty(studentselect.carnet))
+            if (string.IsNullOrEmpty(studentselect.Carnet))
             {
                 MessageBox.Show("No se ha encontrado el carnet estudiantil", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -86,8 +86,8 @@ namespace Labdefense.Views
 
             studentselect.IPar = float.Parse(textP1.Text);
             studentselect.IIPar = float.Parse(textPar2.Text);
-            studentselect.project = float.Parse(textPro.Text);
-            studentselect.test = float.Parse(textTest.Text);
+            studentselect.Project = float.Parse(textPro.Text);
+            studentselect.Test = float.Parse(textTest.Text);
             studentselect.Finalgrades = studentselect.finalgrades();
             ArrayLogic.Arraylog.SaveGrades(studentselect);
             PrintStudents();

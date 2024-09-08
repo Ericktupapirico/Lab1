@@ -11,6 +11,14 @@ namespace Labdefense.Util
     public class Validations
     {
         private ErrorProvider errorProvider = new ErrorProvider();
+       
+        public void ClearText(TextBox[] textBoxes)
+        {
+            foreach (TextBox box in textBoxes)
+            {
+                box.Text = string.Empty;
+            }
+        }
         public bool TextNullEmpty(TextBox[] textBoxes)
         {
             bool TextNull = false;

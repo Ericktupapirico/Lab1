@@ -50,7 +50,7 @@ namespace Labdefense.Models
 
         public bool RemoveStudent(string Carnet)
         {
-            var index = Array.FindIndex(students, e => Carnet.Equals(e.carnet));
+            var index = Array.FindIndex(students, e => Carnet.Equals(e.Carnet));
             if (index < 0) return false;
             for (int i = index; i < quantity - 1; i++)
             {
@@ -64,8 +64,8 @@ namespace Labdefense.Models
 
         public bool UpdateStudent(Student student)
         {
-            if (string.IsNullOrEmpty(student.carnet)) return false;
-            var index = Array.FindIndex(students, s => student.carnet.Equals(s.carnet));
+            if (string.IsNullOrEmpty(student.Carnet)) return false;
+            var index = Array.FindIndex(students, s => student.Carnet.Equals(s.Carnet));
             if (index < 0) return false;
 
 
@@ -75,22 +75,27 @@ namespace Labdefense.Models
 
         public bool SaveGrades(Student student)
         {
-            if (string.IsNullOrEmpty(student.carnet)) return false;
-            var index = Array.FindIndex(students, s => student.carnet.Equals(s.carnet));
+            if (string.IsNullOrEmpty(student.Carnet)) return false;
+            var index = Array.FindIndex(students, s => student.Carnet.Equals(s.Carnet));
             if (index < 0) return false;
             students[index].IPar = student.IPar;
             students[index].IIPar = student.IIPar;
-            students[index].project = student.project;
+            students[index].Project = student.Project;
             return true;
         }
         public Student[] SearchStudent(string carnet)
         {
 
-            var student = Array.Find(students, e => carnet.Equals(e.carnet));
+            var student = Array.Find(students, e => carnet.Equals(e.Carnet));
 
 
             return student != null ? new[] { student } : Array.Empty<Student>();
         }
+        public Student ReturnStudent(string carnet)
+        {
 
+        return Array.Find(students, e => carnet.Equals(e.Carnet));
+            
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Labdefense.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,20 @@ namespace Labdefense.Views
         public ReportView()
         {
             InitializeComponent();
+        }
+        private void PrintStudents()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = ArrayLogicPayments.ArraylogPay.GetPayments();
+
+
+
+        }
+
+
+        private void ReportView_Load(object sender, EventArgs e)
+        {
+            PrintStudents();
         }
     }
 }

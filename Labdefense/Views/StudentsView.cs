@@ -51,19 +51,19 @@ namespace Labdefense.Views
                 return;
             }
 
-            if (string.IsNullOrEmpty(studentselect.carnet))
+            if (string.IsNullOrEmpty(studentselect.Carnet))
             {
                 MessageBox.Show("No se ha encontrado el carnet estudiantil", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
             }
 
-            var resulMessage = MessageBox.Show("Seguro que quiere eliminar a " + studentselect.name + " " + studentselect.surname, "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            var resulMessage = MessageBox.Show("Seguro que quiere eliminar a " + studentselect.Name + " " + studentselect.Surname, "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (resulMessage == DialogResult.No)
             {
                 return;
             }
-            ArrayLogic.Arraylog.RemoveStudent(studentselect.carnet);
+            ArrayLogic.Arraylog.RemoveStudent(studentselect.Carnet);
             dgPrint.DataSource = null;
             dgPrint.DataSource = ArrayLogic.Arraylog.GetStudents();
         }

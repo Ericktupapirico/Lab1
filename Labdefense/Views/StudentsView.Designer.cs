@@ -38,6 +38,9 @@
             // 
             // dgPrint
             // 
+            dgPrint.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgPrint.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgPrint.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgPrint.BackgroundColor = Color.Lavender;
             dgPrint.BorderStyle = BorderStyle.None;
             dgPrint.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
@@ -70,6 +73,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnDelete.Location = new Point(906, 122);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 29);
@@ -80,6 +84,7 @@
             // 
             // button3
             // 
+            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button3.Location = new Point(806, 122);
             button3.Name = "button3";
             button3.Size = new Size(94, 29);

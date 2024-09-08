@@ -44,6 +44,9 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(28, 235);
             dataGridView1.Name = "dataGridView1";
@@ -86,7 +89,6 @@
             textP1.Name = "textP1";
             textP1.Size = new Size(125, 27);
             textP1.TabIndex = 7;
-         
             // 
             // textPar2
             // 
@@ -94,7 +96,6 @@
             textPar2.Name = "textPar2";
             textPar2.Size = new Size(125, 27);
             textPar2.TabIndex = 8;
-         
             // 
             // textPro
             // 
@@ -102,7 +103,6 @@
             textPro.Name = "textPro";
             textPro.Size = new Size(125, 27);
             textPro.TabIndex = 9;
-           
             // 
             // textTest
             // 
@@ -110,7 +110,6 @@
             textTest.Name = "textTest";
             textTest.Size = new Size(125, 27);
             textTest.TabIndex = 10;
-        
             // 
             // errorProvider1
             // 

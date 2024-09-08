@@ -8,11 +8,14 @@ namespace Labdefense.Models
 {
     public class Payments
     {
-        public int Id;
+        public string? Name { get; set; }
+        public string? Surname { get; set; }
         public string? Carnet { get; set; }
-        public string? motive { get; set; }
-        public float cordobas { get; set; }
-        public DateTime date { get; set; }
-        public int cantPayments { get; set; }
+        public string? Identification { get; set; }
+        public string? Motive { get; set; }
+        public float Cordobas { get; set; }
+        public DateTime DatePay { get; set; }
+        public int CantPayments { get; set; }
+      
     }
 }

@@ -35,16 +35,16 @@ namespace Labdefense.Views
         {
             if (student != null)
             {
-                texName.Text = student.name;
-                textSurname.Text = student.surname;
-                textCarnet.Text = student.carnet;
-                dateTimePicker1.Value = (DateTime)student.dateRegister;
+                texName.Text = student.Name;
+                textSurname.Text = student.Surname;
+                textCarnet.Text = student.Carnet;
+                dateTimePicker1.Value = (DateTime)student.DateRegister;
                 textNum.Text = student.Number;
                 texPar1.Text = student.IPar.ToString();
                 textPar2.Text = student.IIPar.ToString();
-                textPro.Text = student.project.ToString();
-                textIdentification.Text = student.identification;
-                textTest.Text = student.test.ToString();
+                textPro.Text = student.Project.ToString();
+                textIdentification.Text = student.Identification;
+                textTest.Text = student.Test.ToString();
             }
         }
         private void textBox9_TextChanged(object sender, EventArgs e)
@@ -75,16 +75,16 @@ namespace Labdefense.Views
             }
             if (student != null)
             {
-                student.name = texName.Text;
-                student.surname = textSurname.Text;
-                student.carnet = textCarnet.Text;
-                student.dateRegister = dateTimePicker1.Value;
+                student.Name = texName.Text;
+                student.Surname = textSurname.Text;
+                student.Carnet = textCarnet.Text;
+                student.DateRegister = dateTimePicker1.Value;
                 student.Number = textNum.Text;
                 student.IPar = float.Parse(texPar1.Text);
                 student.IIPar = float.Parse(textPar2.Text);
-                student.project = float.Parse(textPro.Text);
-                student.identification = textIdentification.Text;
-                student.test = float.Parse(textTest.Text);
+                student.Project = float.Parse(textPro.Text);
+                student.Identification = textIdentification.Text;
+                student.Test = float.Parse(textTest.Text);
 
             }
             OnDataUpdate.Invoke();

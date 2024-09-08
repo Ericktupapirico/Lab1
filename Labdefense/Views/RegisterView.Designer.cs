@@ -52,55 +52,58 @@ namespace Labdefense.Views
             // 
             // dgStudents
             // 
+            dgStudents.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgStudents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgStudents.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgStudents.Location = new Point(12, 288);
             dgStudents.Name = "dgStudents";
             dgStudents.RowHeadersWidth = 51;
             dgStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgStudents.Size = new Size(1009, 188);
+            dgStudents.Size = new Size(1064, 188);
             dgStudents.TabIndex = 0;
             dgStudents.CellContentClick += dgStudents_CellContentClick;
             // 
             // textName
             // 
-            textName.Location = new Point(116, 56);
+            textName.Location = new Point(88, 59);
             textName.Name = "textName";
-            textName.Size = new Size(125, 27);
+            textName.Size = new Size(286, 27);
             textName.TabIndex = 1;
             textName.TextChanged += textName_TextChanged;
             // 
             // textSurname
             // 
-            textSurname.Location = new Point(116, 112);
+            textSurname.Location = new Point(88, 115);
             textSurname.Name = "textSurname";
-            textSurname.Size = new Size(125, 27);
+            textSurname.Size = new Size(286, 27);
             textSurname.TabIndex = 2;
             // 
             // textIdentification
             // 
-            textIdentification.Location = new Point(455, 112);
+            textIdentification.Location = new Point(582, 115);
             textIdentification.Name = "textIdentification";
-            textIdentification.Size = new Size(125, 27);
+            textIdentification.Size = new Size(314, 27);
             textIdentification.TabIndex = 3;
             // 
             // textCarnet
             // 
-            textCarnet.Location = new Point(455, 56);
+            textCarnet.Location = new Point(582, 59);
             textCarnet.Name = "textCarnet";
-            textCarnet.Size = new Size(125, 27);
+            textCarnet.Size = new Size(314, 27);
             textCarnet.TabIndex = 5;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(455, 174);
+            dateTimePicker1.Location = new Point(582, 177);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
+            dateTimePicker1.Size = new Size(314, 27);
             dateTimePicker1.TabIndex = 6;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(60, 59);
+            label1.Location = new Point(32, 62);
             label1.Name = "label1";
             label1.Size = new Size(49, 20);
             label1.TabIndex = 7;
@@ -109,7 +112,7 @@ namespace Labdefense.Views
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(42, 115);
+            label2.Location = new Point(14, 118);
             label2.Name = "label2";
             label2.Size = new Size(67, 20);
             label2.TabIndex = 8;
@@ -118,7 +121,7 @@ namespace Labdefense.Views
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(46, 174);
+            label3.Location = new Point(18, 177);
             label3.Name = "label3";
             label3.Size = new Size(63, 20);
             label3.TabIndex = 9;
@@ -127,7 +130,7 @@ namespace Labdefense.Views
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(397, 59);
+            label4.Location = new Point(524, 62);
             label4.Name = "label4";
             label4.Size = new Size(52, 20);
             label4.TabIndex = 10;
@@ -136,7 +139,7 @@ namespace Labdefense.Views
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(352, 115);
+            label5.Location = new Point(479, 118);
             label5.Name = "label5";
             label5.Size = new Size(97, 20);
             label5.TabIndex = 11;
@@ -145,7 +148,7 @@ namespace Labdefense.Views
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(399, 177);
+            label6.Location = new Point(526, 180);
             label6.Name = "label6";
             label6.Size = new Size(41, 20);
             label6.TabIndex = 12;
@@ -153,7 +156,8 @@ namespace Labdefense.Views
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(674, 69);
+            btnRegister.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRegister.Location = new Point(982, 253);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(94, 29);
             btnRegister.TabIndex = 13;
@@ -163,10 +167,10 @@ namespace Labdefense.Views
             // 
             // textNumMask
             // 
-            textNumMask.Location = new Point(116, 167);
+            textNumMask.Location = new Point(88, 170);
             textNumMask.Mask = "0000-0000";
             textNumMask.Name = "textNumMask";
-            textNumMask.Size = new Size(61, 27);
+            textNumMask.Size = new Size(77, 27);
             textNumMask.TabIndex = 14;
             // 
             // errorProvider1
@@ -177,7 +181,7 @@ namespace Labdefense.Views
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1033, 555);
+            ClientSize = new Size(1088, 555);
             Controls.Add(textNumMask);
             Controls.Add(btnRegister);
             Controls.Add(label6);

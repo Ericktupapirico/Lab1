@@ -9,24 +9,24 @@ namespace Labdefense.Models
     public class Student
     {
 
-        public string? name { get; set; }
-        public string? surname { get; set; }
-        public string? carnet { get; set; }
-        public DateTime? dateRegister { get; set; }
+        public string? Name { get; set; }
+        public string? Surname { get; set; }
+        public string? Carnet { get; set; }
+        public DateTime? DateRegister { get; set; }
         public string? Number { get; set; }
-        public string? identification { get; set; }
+        public string? Identification { get; set; }
         public float IPar { get; set; }
         public float IIPar { get; set; }
-        public float project { get; set; }
+        public float Project { get; set; }
 
-        public float test { get; set; }
+        public float Test { get; set; }
         public float Finalgrades { get; set; }
         public float finalgrades()
         {
 
             if (IPar > 30)
             {
-                MessageBox.Show("Nota: " + project + " Invalido");
+                MessageBox.Show("Nota: " + IPar + " Invalido");
                 IPar = 0;
             }
 
@@ -36,18 +36,18 @@ namespace Labdefense.Models
                 IIPar = 0;
             }
 
-            if (project > 20)
+            if (Project > 20)
             {
-                MessageBox.Show("Nota: " + project + " Invalido");
-                project = 0;
+                MessageBox.Show("Nota: " + Project + " Invalido");
+                Project = 0;
             }
 
-            if (test > 20)
+            if (Test > 20)
             {
-                MessageBox.Show("Nota: " + test + " Invalido");
-                test = 0;
+                MessageBox.Show("Nota: " + Test + " Invalido");
+                Test = 0;
             }
-            Finalgrades = IPar + IIPar + project + test;
+            Finalgrades = IPar + IIPar + Project + Test;
             return Finalgrades;
         }
     }

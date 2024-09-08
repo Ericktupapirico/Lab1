@@ -38,6 +38,8 @@ namespace Labdefense.Views
             dgStudents.Columns["IIPar"].Visible = false;
 
             dgStudents.Columns["project"].Visible = false;
+            dgStudents.Columns["Finalgrades"].Visible = false;
+            dgStudents.Columns["test"].Visible = false;
         }
 
 
@@ -48,12 +50,12 @@ namespace Labdefense.Views
             Student student = new Student
             {
 
-                name = textName.Text,
-                surname = textSurname.Text,
+                Name = textName.Text,
+                Surname = textSurname.Text,
                 Number = textNumMask.Text,
-                carnet = textCarnet.Text,
-                identification = textIdentification.Text,
-                dateRegister = dateTimePicker1.Value,
+                Carnet = textCarnet.Text,
+                Identification = textIdentification.Text,
+                DateRegister = dateTimePicker1.Value,
 
 
             };
