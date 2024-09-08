@@ -108,7 +108,7 @@
             // 
             // dgStudents
             // 
-            dgStudents.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgStudents.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgStudents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgStudents.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -116,7 +116,7 @@
             dgStudents.Name = "dgStudents";
             dgStudents.RowHeadersWidth = 51;
             dgStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgStudents.Size = new Size(1009, 188);
+            dgStudents.Size = new Size(1009, 452);
             dgStudents.TabIndex = 15;
             dgStudents.CellContentDoubleClick += dgStudents_CellContentDoubleClick;
             // 
@@ -166,7 +166,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1066, 500);
+            ClientSize = new Size(1066, 735);
             Controls.Add(comboMotive);
             Controls.Add(button2);
             Controls.Add(button1);

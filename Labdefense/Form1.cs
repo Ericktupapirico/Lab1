@@ -5,12 +5,12 @@ namespace Labdefense
 {
     public partial class Form1 : Form
     {
-        private Student[] students;
+    
         public Form1()
         {
             InitializeComponent();
 
-            students = new Student[] { };
+           
         }
 
 
@@ -31,10 +31,7 @@ namespace Labdefense
             PanelFather.Controls.Add(formHijo);
             formHijo.Show();
         }
-        public void UpdateStudents(Student[] updatedStudents)
-        {
-            students = updatedStudents;
-        }
+     
 
         private void btnMin_Click(object sender, EventArgs e)
         {

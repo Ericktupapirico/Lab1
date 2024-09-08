@@ -52,7 +52,7 @@ namespace Labdefense.Views
             // 
             // dgStudents
             // 
-            dgStudents.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgStudents.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgStudents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgStudents.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -60,7 +60,7 @@ namespace Labdefense.Views
             dgStudents.Name = "dgStudents";
             dgStudents.RowHeadersWidth = 51;
             dgStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgStudents.Size = new Size(1064, 188);
+            dgStudents.Size = new Size(1064, 356);
             dgStudents.TabIndex = 0;
             dgStudents.CellContentClick += dgStudents_CellContentClick;
             // 
@@ -181,7 +181,7 @@ namespace Labdefense.Views
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1088, 555);
+            ClientSize = new Size(1088, 656);
             Controls.Add(textNumMask);
             Controls.Add(btnRegister);
             Controls.Add(label6);

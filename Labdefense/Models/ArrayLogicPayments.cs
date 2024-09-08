@@ -5,13 +5,13 @@
         private static readonly ArrayLogicPayments logicPay = new();
         public static ArrayLogicPayments ArraylogPay { get { return logicPay; } }
         private Payments[] _payments;
-        private Student[] _students;
+     
         private int size = 0, quantity = 0;
 
         public ArrayLogicPayments()
         {
             _payments = new Payments[size];
-            _students = new Student[size]; 
+           
         }
 
         public void AddPayment(Payments newPayment)

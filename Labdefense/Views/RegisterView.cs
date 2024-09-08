@@ -52,6 +52,11 @@ namespace Labdefense.Views
                 return;
             }
 
+            if (ArrayLogic.Arraylog.SearchStudent(textIdentification.Text).Any())
+            {
+                MessageBox.Show("La cedula ya está registrado. Por favor, ingrese una cedula única.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Student student = new Student
             {
 

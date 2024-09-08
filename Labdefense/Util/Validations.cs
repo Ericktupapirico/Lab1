@@ -117,31 +117,13 @@ namespace Labdefense.Util
 
 
 
-            if (!char.IsDigit(ch) && ch != '.')
+            if (!char.IsDigit(ch))
             {
                 e.Handled = true;
                 return;
             }
 
-            if (ch == '.')
-            {
-                bool hasDecimal = currentText.Contains(".");
-
-                e.Handled = hasDecimal;
-
-                if (!hasDecimal && currentText.Length == 0)
-                {
-
-                    textBox.Text = "0" + textBox.Text;
-                    textBox.SelectionStart = textBox.Text.Length;
-                }
-                else if (currentText.EndsWith("."))
-                {
-
-                    textBox.Text += "0";
-                    textBox.SelectionStart = textBox.Text.Length;
-                }
-            }
+            
 
 
         }

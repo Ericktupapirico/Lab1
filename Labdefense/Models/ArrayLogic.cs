@@ -58,8 +58,9 @@ namespace Labdefense.Models
             {
                 students[i] = students[i + 1];
             }
-            students[quantity - 1] = null;
+            
             --quantity;
+            Array.Resize(ref students, quantity);
             return true;
         }
 
@@ -97,6 +98,9 @@ namespace Labdefense.Models
         {
             return SearchStudent(carnet).Length == 0;
         }
-   
+        public bool IdtUnique(string identification)
+        {
+            return SearchStudent(identification).Length == 0;
+        }
     }
 }

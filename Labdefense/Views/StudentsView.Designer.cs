@@ -39,7 +39,7 @@
             // 
             // dgPrint
             // 
-            dgPrint.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgPrint.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgPrint.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgPrint.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgPrint.BackgroundColor = Color.Lavender;
@@ -51,7 +51,7 @@
             dgPrint.Name = "dgPrint";
             dgPrint.RowHeadersWidth = 51;
             dgPrint.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgPrint.Size = new Size(974, 281);
+            dgPrint.Size = new Size(1006, 612);
             dgPrint.TabIndex = 0;
             // 
             // button1
@@ -75,7 +75,7 @@
             // btnDelete
             // 
             btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnDelete.Location = new Point(906, 122);
+            btnDelete.Location = new Point(935, 122);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 29);
             btnDelete.TabIndex = 3;
@@ -86,7 +86,7 @@
             // button3
             // 
             button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button3.Location = new Point(806, 122);
+            button3.Location = new Point(835, 122);
             button3.Name = "button3";
             button3.Size = new Size(94, 29);
             button3.TabIndex = 4;
@@ -96,7 +96,8 @@
             // 
             // button2
             // 
-            button2.Location = new Point(706, 122);
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button2.Location = new Point(735, 122);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 5;
@@ -108,7 +109,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1055, 450);
+            ClientSize = new Size(1055, 817);
             Controls.Add(button2);
             Controls.Add(button3);
             Controls.Add(btnDelete);
