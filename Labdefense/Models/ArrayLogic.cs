@@ -21,6 +21,8 @@ namespace Labdefense.Models
 
         public void AddStudent(Student newstudent)
         {
+
+          
             if (quantity >= size)
             {
                 size = size == 0 ? 1 : size + 1;
@@ -91,11 +93,10 @@ namespace Labdefense.Models
 
             return student != null ? new[] { student } : Array.Empty<Student>();
         }
-        public Student ReturnStudent(string carnet)
+        public bool CarnetUnique(string carnet)
         {
-
-        return Array.Find(students, e => carnet.Equals(e.Carnet));
-            
+            return SearchStudent(carnet).Length == 0;
         }
+   
     }
 }

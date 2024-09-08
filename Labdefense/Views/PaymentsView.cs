@@ -55,13 +55,9 @@ namespace Labdefense.Views
                     CantPayments = Quantity
 
                 };
-           
-            
-        
-           
-                 ArrayLogicPayments.ArraylogPay.AssignPaymentToStudent(payment, student);
 
-                
+
+
                 ArrayLogicPayments.ArraylogPay.AddPayment(payment);
           
         }
@@ -70,14 +66,18 @@ namespace Labdefense.Views
         {
 
             TextBox[] textBoxes = { textCarnet, textCordobas };
-
+            TextBox[] textCarnetValid = { textCarnet };
+            if (validations.IsValidCarnet(textCarnetValid))
+            {
+                MessageBox.Show("Por favor, rellena todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (validations.TextNullEmpty(textBoxes))
             {
                 MessageBox.Show("Por favor, rellena todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
             RegisterStudents();
             ++Quantity;
             PrintStudents();

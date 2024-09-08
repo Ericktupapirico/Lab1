@@ -1,4 +1,5 @@
 ﻿using Labdefense.Models;
+using Labdefense.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace Labdefense.Views
 {
     public partial class ReportView : Form
     {
+        private ExportToExcel ExportToExcel;
         public ReportView()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace Labdefense.Views
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = ArrayLogicPayments.ArraylogPay.GetPayments();
 
-
+            ExportToExcel = new ExportToExcel();
 
         }
 
@@ -30,6 +32,23 @@ namespace Labdefense.Views
         private void ReportView_Load(object sender, EventArgs e)
         {
             PrintStudents();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog()
+            {
+                Filter = "Excel Files (*.xlsx)|*.xlsx",
+                FileName = "PaymentsReport.xlsx"
+            };
+
+            if(dlg.ShowDialog() == DialogResult.OK )
+            {
+                ExportToExcel.ExportCloseXml(dataGridView1, dlg.FileName);
+                MessageBox.Show("Datos exportados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
         }
     }
 }

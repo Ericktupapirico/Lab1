@@ -33,6 +33,7 @@
             textSearch = new TextBox();
             btnDelete = new Button();
             button3 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgPrint).BeginInit();
             SuspendLayout();
             // 
@@ -93,11 +94,22 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(706, 122);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 5;
+            button2.Text = "Export";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // StudentsView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1055, 450);
+            Controls.Add(button2);
             Controls.Add(button3);
             Controls.Add(btnDelete);
             Controls.Add(textSearch);
@@ -118,5 +130,6 @@
         private TextBox textSearch;
         private Button btnDelete;
         private Button button3;
+        private Button button2;
     }
 }

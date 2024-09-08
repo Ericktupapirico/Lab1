@@ -46,6 +46,11 @@ namespace Labdefense.Views
         void RegisterStudents()
         {
 
+            if (ArrayLogic.Arraylog.SearchStudent(textCarnet.Text).Any())
+            {
+                MessageBox.Show("El carnet ya está registrado. Por favor, ingrese un carnet único.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             Student student = new Student
             {

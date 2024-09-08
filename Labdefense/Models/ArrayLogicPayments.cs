@@ -16,6 +16,13 @@
 
         public void AddPayment(Payments newPayment)
         {
+            if (!CanPayment(newPayment.Carnet))
+            {
+                MessageBox.Show("No Puede pagar sin haber registrado un estudiante", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            AutoFIllCamp(newPayment);
+            
             if (quantity >= size)
             {
                 size = size == 0 ? 1 : size + 1;
@@ -56,24 +63,22 @@
             return pay != null ? new[] { pay } : Array.Empty<Payments>();
         }
 
-        public bool AssignPaymentToStudent(Payments payment, Student student)
+         public bool CanPayment(string Carnet)
         {
-            if (string.IsNullOrEmpty(payment.Carnet)) return false;
-            var paymentIndex = Array.FindIndex(_payments, p => payment.Carnet.Equals(p.Carnet));
-            if (paymentIndex < 0) return false;
-
-            if (string.IsNullOrEmpty(student.Carnet)) return false;
-            var studentIndex = Array.FindIndex(_students, s => student.Carnet.Equals(s.Carnet));
-            if (studentIndex < 0) return false;
-            if (paymentIndex == studentIndex)
-            {
-                payment.Name = student.Name;
-                payment.Surname = student.Surname;
-                payment.Identification = student.Identification;
-                return true;
-            }
-
-            return false;
+            var StudentExist = ArrayLogic.Arraylog.SearchStudent(Carnet).Any();
+            return StudentExist;
         }
+        public void AutoFIllCamp(Payments payments)
+        {
+            var StudentFills = ArrayLogic.Arraylog.SearchStudent(payments.Carnet).FirstOrDefault();
+            if (payments != null)
+            {
+                payments.Name = StudentFills.Name;
+                payments.Surname = StudentFills.Surname;
+                payments.Identification = StudentFills.Identification;
+            }
+        }
+
+
     }
 }

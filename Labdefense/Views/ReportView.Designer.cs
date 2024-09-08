@@ -29,11 +29,15 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            btnExport = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 135);
             dataGridView1.Name = "dataGridView1";
@@ -41,11 +45,23 @@
             dataGridView1.Size = new Size(1121, 188);
             dataGridView1.TabIndex = 0;
             // 
+            // btnExport
+            // 
+            btnExport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnExport.Location = new Point(1039, 80);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(94, 29);
+            btnExport.TabIndex = 1;
+            btnExport.Text = "Export";
+            btnExport.UseVisualStyleBackColor = true;
+            btnExport.Click += btnExport_Click;
+            // 
             // ReportView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1159, 513);
+            Controls.Add(btnExport);
             Controls.Add(dataGridView1);
             Name = "ReportView";
             Text = "ReportView";
@@ -57,5 +73,6 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private Button btnExport;
     }
 }

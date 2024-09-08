@@ -1,5 +1,5 @@
 ﻿using Labdefense.Models;
-
+using Labdefense.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,13 +14,13 @@ namespace Labdefense.Views
 {
     public partial class StudentsView : Form
     {
-
+        private ExportToExcel ExportToExcel;
         public Student[] students;
         public StudentsView()
         {
 
             InitializeComponent();
-
+            ExportToExcel = new ExportToExcel();
 
         }
         private void PrintStudents()
@@ -107,6 +107,22 @@ namespace Labdefense.Views
         private void textSearch_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog()
+            {
+                Filter = "Excel Files (*.xlsx)|*.xlsx",
+                FileName = "Studets.xlsx"
+            };
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                ExportToExcel.ExportCloseXml(dgPrint, dlg.FileName);
+                MessageBox.Show("Datos exportados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
     }
 }
