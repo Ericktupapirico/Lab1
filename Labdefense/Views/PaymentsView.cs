@@ -37,8 +37,6 @@ namespace Labdefense.Views
             dgStudents.DataSource = null;
             dgStudents.DataSource = ArrayLogicPayments.ArraylogPay.GetPayments();
 
-
-
         }
 
 
@@ -47,19 +45,17 @@ namespace Labdefense.Views
 
             string CarnetPayment = textCarnet.Text;
             Payments payment = new Payments
-                {
-                    Cordobas = float.Parse(textCordobas.Text),
-                    Motive = comboMotive.Text,
-                    Carnet = CarnetPayment,
-                    DatePay = dateTimePicker1.Value,
-                    CantPayments = Quantity
+            {
+                Cordobas = float.Parse(textCordobas.Text),
+                Motive = comboMotive.Text,
+                Carnet = CarnetPayment,
+                DatePay = dateTimePicker1.Value,
+                CantPayments = Quantity
 
-                };
+            };
 
+            ArrayLogicPayments.ArraylogPay.AddPayment(payment);
 
-
-                ArrayLogicPayments.ArraylogPay.AddPayment(payment);
-          
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -142,20 +138,9 @@ namespace Labdefense.Views
 
         private void dgStudents_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-    
-                var selectedStudent = dgStudents.Rows[e.RowIndex].DataBoundItem as Payments;
-
-                if (selectedStudent != null)
-                {
-                    
-                    textCarnet.Text = selectedStudent.Carnet;
-                    comboMotive.Text = selectedStudent.Motive;
-                    textCordobas.Text = selectedStudent.Cordobas.ToString();
+            
                 }
             }
         }
 
-    }
-}
+    

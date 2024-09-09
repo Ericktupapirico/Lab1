@@ -5,12 +5,12 @@ namespace Labdefense
 {
     public partial class Form1 : Form
     {
-    
+
         public Form1()
         {
             InitializeComponent();
 
-           
+
         }
 
 
@@ -31,7 +31,7 @@ namespace Labdefense
             PanelFather.Controls.Add(formHijo);
             formHijo.Show();
         }
-     
+
 
         private void btnMin_Click(object sender, EventArgs e)
         {
@@ -62,8 +62,6 @@ namespace Labdefense
         private void btnRegister_Click(object sender, EventArgs e)
 
         {
-
-
 
             OpenForms(new RegisterView());
         }

@@ -43,6 +43,7 @@
             comboMotive.AutoCompleteCustomSource.AddRange(new string[] { "Matricula", "Aranceles", "Biblioteca", "Constancia de dotas" });
             comboMotive.AutoCompleteMode = AutoCompleteMode.Append;
             comboMotive.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboMotive.BackColor = SystemColors.Info;
             comboMotive.DropDownStyle = ComboBoxStyle.DropDownList;
             comboMotive.FormattingEnabled = true;
             comboMotive.Items.AddRange(new object[] { "Matricula", "Aranceles", "Biblioteca", "Constancia de notas", "Otros..." });
@@ -53,6 +54,7 @@
             // 
             // textCordobas
             // 
+            textCordobas.BackColor = SystemColors.Info;
             textCordobas.Location = new Point(101, 146);
             textCordobas.Name = "textCordobas";
             textCordobas.Size = new Size(125, 27);
@@ -61,32 +63,40 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(69, 153);
             label3.Name = "label3";
-            label3.Size = new Size(26, 20);
+            label3.Size = new Size(27, 20);
             label3.TabIndex = 36;
             label3.Text = "C$";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(35, 95);
             label2.Name = "label2";
-            label2.Size = new Size(56, 20);
+            label2.Size = new Size(59, 20);
             label2.TabIndex = 35;
             label2.Text = "Motivo";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(43, 220);
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(41, 216);
             label1.Name = "label1";
-            label1.Size = new Size(52, 20);
+            label1.Size = new Size(55, 20);
             label1.TabIndex = 34;
             label1.Text = "Carnet";
             // 
             // textCarnet
             // 
+            textCarnet.BackColor = SystemColors.Info;
+            textCarnet.Enabled = false;
             textCarnet.Location = new Point(101, 213);
             textCarnet.Name = "textCarnet";
             textCarnet.Size = new Size(125, 27);
@@ -94,6 +104,7 @@
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.CalendarMonthBackground = SystemColors.Info;
             dateTimePicker1.Location = new Point(12, 12);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(275, 27);
@@ -101,11 +112,12 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(423, 222);
+            btnUpdate.BackgroundImage = Properties.Resources.updatebutton;
+            btnUpdate.BackgroundImageLayout = ImageLayout.Stretch;
+            btnUpdate.Location = new Point(256, 209);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.Size = new Size(41, 34);
             btnUpdate.TabIndex = 40;
-            btnUpdate.Text = "Actualizar";
             btnUpdate.UseVisualStyleBackColor = true;
             btnUpdate.Click += btnUpdate_Click;
             // 
@@ -113,6 +125,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(49, 66, 89);
             ClientSize = new Size(580, 304);
             Controls.Add(btnUpdate);
             Controls.Add(dateTimePicker1);

@@ -11,7 +11,7 @@ namespace Labdefense.Util
     public class Validations
     {
         private ErrorProvider errorProvider = new ErrorProvider();
-       
+
         public void ClearText(TextBox[] textBoxes)
         {
             foreach (TextBox box in textBoxes)
@@ -115,17 +115,11 @@ namespace Labdefense.Util
             TextBox textBox = (TextBox)sender;
             string currentText = textBox.Text;
 
-
-
             if (!char.IsDigit(ch))
             {
                 e.Handled = true;
                 return;
             }
-
-            
-
-
         }
 
         public bool NumberValif(TextBox[] Num)

@@ -30,13 +30,8 @@ namespace Labdefense.Views
         {
             dgStudents.DataSource = null;
             dgStudents.DataSource = ArrayLogic.Arraylog.GetStudents();
-
-
-
             dgStudents.Columns["IPar"].Visible = false;
-
             dgStudents.Columns["IIPar"].Visible = false;
-
             dgStudents.Columns["project"].Visible = false;
             dgStudents.Columns["Finalgrades"].Visible = false;
             dgStudents.Columns["test"].Visible = false;

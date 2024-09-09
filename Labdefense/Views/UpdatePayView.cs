@@ -24,8 +24,8 @@ namespace Labdefense.Views
         {
             InitializeComponent();
             validations = new Validations();
-            student = payments; // Asignar el objeto recibido al objeto student
-            UpdateInformation(); // Llamar a UpdateInformation para rellenar los campos
+            student = payments; 
+            UpdateInformation(); 
         }
 
         public void UpdateInformation()
@@ -57,14 +57,14 @@ namespace Labdefense.Views
 
             if (student != null)
             {
-              
+
                 student.Carnet = textCarnet.Text;
                 student.Cordobas = float.Parse(textCordobas.Text);
                 student.Motive = comboMotive.Text;
                 student.DatePay = dateTimePicker1.Value;
             }
 
-         
+
             OnDataUpdate?.Invoke();
             this.Close();
         }

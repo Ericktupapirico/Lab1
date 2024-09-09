@@ -22,7 +22,7 @@ namespace Labdefense.Models
         public void AddStudent(Student newstudent)
         {
 
-          
+
             if (quantity >= size)
             {
                 size = size == 0 ? 1 : size + 1;
@@ -58,7 +58,7 @@ namespace Labdefense.Models
             {
                 students[i] = students[i + 1];
             }
-            
+
             --quantity;
             Array.Resize(ref students, quantity);
             return true;

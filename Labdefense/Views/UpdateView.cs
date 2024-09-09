@@ -115,5 +115,10 @@ namespace Labdefense.Views
         {
 
         }
+
+        private void texName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

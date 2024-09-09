@@ -5,13 +5,13 @@
         private static readonly ArrayLogicPayments logicPay = new();
         public static ArrayLogicPayments ArraylogPay { get { return logicPay; } }
         private Payments[] _payments;
-     
+
         private int size = 0, quantity = 0;
 
         public ArrayLogicPayments()
         {
             _payments = new Payments[size];
-           
+
         }
 
         public void AddPayment(Payments newPayment)
@@ -22,7 +22,7 @@
                 return;
             }
             AutoFIllCamp(newPayment);
-            
+
             if (quantity >= size)
             {
                 size = size == 0 ? 1 : size + 1;
@@ -63,7 +63,7 @@
             return pay != null ? new[] { pay } : Array.Empty<Payments>();
         }
 
-         public bool CanPayment(string Carnet)
+        public bool CanPayment(string Carnet)
         {
             var StudentExist = ArrayLogic.Arraylog.SearchStudent(Carnet).Any();
             return StudentExist;

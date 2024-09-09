@@ -23,7 +23,6 @@ namespace Labdefense.Views
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = ArrayLogicPayments.ArraylogPay.GetPayments();
-
             ExportToExcel = new ExportToExcel();
 
         }
@@ -42,7 +41,7 @@ namespace Labdefense.Views
                 FileName = "PaymentsReport.xlsx"
             };
 
-            if(dlg.ShowDialog() == DialogResult.OK )
+            if (dlg.ShowDialog() == DialogResult.OK)
             {
                 ExportToExcel.ExportCloseXml(dataGridView1, dlg.FileName);
                 MessageBox.Show("Datos exportados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
