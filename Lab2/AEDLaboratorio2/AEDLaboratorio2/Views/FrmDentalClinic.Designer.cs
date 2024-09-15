@@ -165,6 +165,7 @@
             // DPickerScheduledDate
             // 
             DPickerScheduledDate.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DPickerScheduledDate.Format = DateTimePickerFormat.Short;
             DPickerScheduledDate.Location = new Point(188, 189);
             DPickerScheduledDate.Name = "DPickerScheduledDate";
             DPickerScheduledDate.Size = new Size(307, 27);
