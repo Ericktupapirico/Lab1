@@ -36,14 +36,10 @@ namespace AEDLaboratorio2.Views
             var appointment = new Appointment()
             {
                 Id = Convert.ToInt32(TxtNumAppointmentID.Value),
+                PatientName = TxtPatientName.Text,
+                PatientSurname = TxtPatientSurname.Text,
                 Service = TxtServiceName.Text,
-                ScheduledDate = DPickerScheduledDate.Value,
-                Patient = new Patient()
-                {
-                    Id = Convert.ToInt32(TxtNumPatientID.Value),
-                    Name = TxtPatientName.Text,
-                    Surname = TxtPatientSurname.Text
-                }
+                ScheduledDate = DPickerScheduledDate.Value
             };
 
             (bool result, string message) tuple;
@@ -111,7 +107,6 @@ namespace AEDLaboratorio2.Views
             TxtNumAppointmentID.Value = TxtNumAppointmentID.Minimum;
             TxtServiceName.Text = string.Empty;
             DPickerScheduledDate.Value = DateTime.Now;
-            TxtNumPatientID.Value = TxtNumPatientID.Minimum;
             TxtPatientName.Text = string.Empty;
             TxtPatientSurname.Text = string.Empty;
         }
@@ -149,7 +144,7 @@ namespace AEDLaboratorio2.Views
             }
 
             var dlgResult = MessageBox.Show($"Seguro que desea eliminar la cita para " +
-                $"{selectedAppointment.Patient?.Name} {selectedAppointment.Patient?.Surname}?",
+                $"{selectedAppointment.PatientName} {selectedAppointment.PatientSurname}?",
                 "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dlgResult == DialogResult.No)
                 return;
@@ -180,21 +175,12 @@ namespace AEDLaboratorio2.Views
                 return;
             }
 
-            if (selectedAppointment.Patient is null)
-            {
-                MessageBox.Show("No se encontró al paciente asociado a la cita seleccionada", "Atención",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-
             TxtNumAppointmentID.Value = selectedAppointment.Id;
             TxtNumAppointmentID.ReadOnly = true;
             TxtServiceName.Text = selectedAppointment.Service;
             DPickerScheduledDate.Value = selectedAppointment.ScheduledDate;
-            TxtNumPatientID.Value = selectedAppointment.Patient.Id;
-            TxtNumPatientID.ReadOnly = true;
-            TxtPatientName.Text = selectedAppointment.Patient.Name;
-            TxtPatientSurname.Text = selectedAppointment.Patient.Surname;
+            TxtPatientName.Text = selectedAppointment.PatientName;
+            TxtPatientSurname.Text = selectedAppointment.PatientSurname;
 
             _formOperation = FormOperation.Update;
             UpdateControlState(() => false);
@@ -203,12 +189,15 @@ namespace AEDLaboratorio2.Views
 
         private void UpdateControlState(Func<bool> condition)
         {
-            BtnSearchById.Enabled = BtnSearchPatientByID.Enabled = BtnUpdate.Enabled =
+            BtnSearchById.Enabled = BtnSearchByMonth.Enabled = BtnUpdate.Enabled =
             BtnDelete.Enabled = BtnShowAll.Enabled = BtnPrevious.Enabled = BtnNext.Enabled = condition();
         }
 
-        private void FrmDentalClinic_Load(object sender, EventArgs e) =>
+        private void FrmDentalClinic_Load(object sender, EventArgs e)
+        {
+            CmbBoxMonths.SelectedIndex = 0;
             UpdateControlState(() => DgViewAppointments.Rows.Count > 0);
+        }
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
@@ -224,6 +213,34 @@ namespace AEDLaboratorio2.Views
             BtnCancel.Visible = false;
             RefreshDataGridView();
             ClearForm();
+        }
+
+        private void BtnSearchById_Click(object sender, EventArgs e)
+        {
+            (bool result, string message, Appointment? appointment) =
+                _appointmentModel.GetById(Convert.ToInt32(TxtNumSearchID.Value));
+
+            if (!result && appointment is null)
+            {
+                MessageBox.Show(message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            DgViewAppointments.DataSource = new Appointment?[] { appointment };
+        }
+
+        private void BtnSearchByMonth_Click(object sender, EventArgs e)
+        {
+            (bool result, string message, Appointment[] appointments) = 
+                _appointmentModel.GetByMonth(CmbBoxMonths.SelectedIndex + 1);
+
+            if (!result && appointments is null)
+            {
+                MessageBox.Show(message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            DgViewAppointments.DataSource = appointments;
         }
     }
 }
