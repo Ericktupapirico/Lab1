@@ -30,6 +30,15 @@ namespace AEDLaboratorio2.Models.DentalClinic
             return index;
         }
 
+        private bool IsExistingId(int id)
+        {
+            for (var i = 0; i < _quantity; i++)
+                if (_appointments[i].Id == id)
+                    return true;
+
+            return false;
+        }
+
         public (bool result, string message) Add(Appointment appointment)
         {
             if (_size == 0)
@@ -37,6 +46,9 @@ namespace AEDLaboratorio2.Models.DentalClinic
 
             if (_quantity >= _size)
                 return (false, "No hay espacio en el arreglo para un nueva cita");
+
+            if (IsExistingId(appointment.Id))
+                return (false, "Ya existe una cita con el ID ingresado");
 
             var index = Search(appointment.Id);
             if (index > 0)
