@@ -18,11 +18,11 @@ namespace AEDLaboratorio2.Models.DentalClinic
             return (true, "Arreglo creado exitosamente");
         }
 
-        private int SearchById(int id)
+        private int FindIndex(int appointmentId)
         {
             int index = -1;
             for (var i = 0; i < _quantity; i++)
-                if (_appointments[i].Id == id)
+                if (_appointments[i].Id == appointmentId)
                 {
                     index = i;
                     return index;
@@ -105,7 +105,7 @@ namespace AEDLaboratorio2.Models.DentalClinic
             if (_quantity == 0)
                 return (false, "No hay citas para eliminar");
 
-            var index = SearchById(id);
+            var index = FindIndex(id);
             if (index < 0)
                 return (false, "No existe una cita con el ID ingresado");
 
@@ -125,7 +125,7 @@ namespace AEDLaboratorio2.Models.DentalClinic
             if (_quantity == 0)
                 return (false, "No hay citas para buscar", null);
 
-            var index = SearchById(id);
+            var index = FindIndex(id);
 
             return id < 0 ? (false, "No existe una cita con el ID ingresado", null) :
                 (true, $"Cita con Id: {id} encontrado", _appointments[index]);

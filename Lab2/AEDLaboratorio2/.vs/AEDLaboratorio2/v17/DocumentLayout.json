@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\Repositories\\aed_labs\\Lab2\\AEDLaboratorio2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|d:\\repositories\\aed_labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\views\\frmdentalclinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\views\\frmdentalclinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|d:\\repositories\\aed_labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\models\\dentalclinic\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\models\\dentalclinic\\appointmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|d:\\repositories\\aed_labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\views\\frmdentalclinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\views\\frmdentalclinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|d:\\repositories\\aed_labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\views\\frmdentalclinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\views\\frmdentalclinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,38 +43,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AppointmentModel.cs",
+              "DocumentMoniker": "D:\\Repositories\\aed_labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Models\\DentalClinic\\AppointmentModel.cs",
+              "RelativeDocumentMoniker": "AEDLaboratorio2\\Models\\DentalClinic\\AppointmentModel.cs",
+              "ToolTip": "D:\\Repositories\\aed_labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Models\\DentalClinic\\AppointmentModel.cs",
+              "RelativeToolTip": "AEDLaboratorio2\\Models\\DentalClinic\\AppointmentModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T19:49:26.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FrmDentalClinic.cs [Design]",
               "DocumentMoniker": "D:\\Repositories\\aed_labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\FrmDentalClinic.cs",
               "RelativeDocumentMoniker": "AEDLaboratorio2\\Views\\FrmDentalClinic.cs",
               "ToolTip": "D:\\Repositories\\aed_labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\FrmDentalClinic.cs [Design]",
               "RelativeToolTip": "AEDLaboratorio2\\Views\\FrmDentalClinic.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T17:12:33.298Z",
+              "WhenOpened": "2024-09-15T19:34:45.494Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppointmentModel.cs",
-              "DocumentMoniker": "D:\\Repositories\\aed_labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Models\\DentalClinic\\AppointmentModel.cs",
-              "RelativeDocumentMoniker": "AEDLaboratorio2\\Models\\DentalClinic\\AppointmentModel.cs",
-              "ToolTip": "D:\\Repositories\\aed_labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Models\\DentalClinic\\AppointmentModel.cs",
-              "RelativeToolTip": "AEDLaboratorio2\\Models\\DentalClinic\\AppointmentModel.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAowHkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T17:06:08.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmDentalClinic.cs",
-              "DocumentMoniker": "D:\\Repositories\\aed_labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\FrmDentalClinic.cs",
-              "RelativeDocumentMoniker": "AEDLaboratorio2\\Views\\FrmDentalClinic.cs",
-              "ToolTip": "D:\\Repositories\\aed_labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\FrmDentalClinic.cs",
-              "RelativeToolTip": "AEDLaboratorio2\\Views\\FrmDentalClinic.cs",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAowPUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T22:23:59.656Z"
             }
           ]
         }
