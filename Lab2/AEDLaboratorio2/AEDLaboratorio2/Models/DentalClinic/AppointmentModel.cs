@@ -89,7 +89,7 @@ namespace AEDLaboratorio2.Models.DentalClinic
             return (true, "Cita eliminado exitosamente");
         }
 
-        public (bool result, string message, Appointment? appointment) Get(int id)
+        public (bool result, string message, Appointment? appointment) GetById(int id)
         {
             if (_size == 0)
                 return (false, "Primero debe asignar un tamaño al arreglo", null);
@@ -101,6 +101,20 @@ namespace AEDLaboratorio2.Models.DentalClinic
 
             return id < 0 ? (false, "No existe una cita con el ID ingresado", null) :
                 (true, $"Cita con Id: {id} encontrado", _appointments[index]);
+        }
+
+        public (bool result, string message, Appointment[] appointments) GetByMonth(int month)
+        {
+            if (_size == 0)
+                return (false, "Primero debe asignar un tamaño al arreglo", []);
+
+            if (_quantity == 0)
+                return (false, "No hay citas para buscar", []);
+
+            var appointments = _appointments
+                .Take(_quantity).Where(a => a.ScheduledDate.Month == month).ToArray();
+
+            return (true, "Citas encontradas", appointments);
         }
 
         public Appointment[] GetAll() => _appointments.Take(_quantity).ToArray();
