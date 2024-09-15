@@ -231,7 +231,7 @@ namespace AEDLaboratorio2.Views
 
         private void BtnSearchByMonth_Click(object sender, EventArgs e)
         {
-            (bool result, string message, Appointment[] appointments) = 
+            (bool result, string message, Appointment[] appointments) =
                 _appointmentModel.GetByMonth(CmbBoxMonths.SelectedIndex + 1);
 
             if (!result && appointments is null)
