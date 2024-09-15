@@ -39,8 +39,6 @@
             label6 = new Label();
             label3 = new Label();
             DPickerScheduledDate = new DateTimePicker();
-            label4 = new Label();
-            TxtNumPatientID = new NumericUpDown();
             label7 = new Label();
             label8 = new Label();
             TxtPatientName = new TextBox();
@@ -51,8 +49,7 @@
             BtnSearchById = new Button();
             TxtNumSearchID = new NumericUpDown();
             label9 = new Label();
-            BtnSearchPatientByID = new Button();
-            numericUpDown1 = new NumericUpDown();
+            BtnSearchByMonth = new Button();
             label11 = new Label();
             BtnNext = new Button();
             BtnPrevious = new Button();
@@ -61,18 +58,17 @@
             BtnDelete = new Button();
             DgViewAppointments = new DataGridView();
             DgColumnAppointmentID = new DataGridViewTextBoxColumn();
-            DgColumnServiceName = new DataGridViewTextBoxColumn();
-            DgColumnScheduledDate = new DataGridViewTextBoxColumn();
-            DgColumnPatientID = new DataGridViewTextBoxColumn();
             DgColumnPatientName = new DataGridViewTextBoxColumn();
             DgColumnPatientSurname = new DataGridViewTextBoxColumn();
+            DgColumnServiceName = new DataGridViewTextBoxColumn();
+            DgColumnScheduledDate = new DataGridViewTextBoxColumn();
             ErrorProvider = new ErrorProvider(components);
             BtnCancel = new Button();
+            label4 = new Label();
+            CmbBoxMonths = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)TxtNumSize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumAppointmentID).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)TxtNumPatientID).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumSearchID).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DgViewAppointments).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ErrorProvider).BeginInit();
             SuspendLayout();
@@ -174,26 +170,6 @@
             DPickerScheduledDate.Size = new Size(307, 27);
             DPickerScheduledDate.TabIndex = 52;
             // 
-            // label4
-            // 
-            label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
-            label4.Location = new Point(537, 99);
-            label4.Name = "label4";
-            label4.Size = new Size(84, 27);
-            label4.TabIndex = 53;
-            label4.Text = "ID paciente:";
-            // 
-            // TxtNumPatientID
-            // 
-            TxtNumPatientID.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TxtNumPatientID.Location = new Point(638, 97);
-            TxtNumPatientID.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            TxtNumPatientID.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            TxtNumPatientID.Name = "TxtNumPatientID";
-            TxtNumPatientID.Size = new Size(309, 27);
-            TxtNumPatientID.TabIndex = 54;
-            TxtNumPatientID.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            // 
             // label7
             // 
             label7.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
@@ -273,6 +249,7 @@
             BtnSearchById.Text = "Buscar";
             BtnSearchById.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnSearchById.UseVisualStyleBackColor = true;
+            BtnSearchById.Click += BtnSearchById_Click;
             // 
             // TxtNumSearchID
             // 
@@ -295,37 +272,27 @@
             label9.Text = "Buscar por ID cita:";
             label9.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // BtnSearchPatientByID
+            // BtnSearchByMonth
             // 
-            BtnSearchPatientByID.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnSearchPatientByID.Image = Properties.Resources.search_by_patient_icon;
-            BtnSearchPatientByID.Location = new Point(860, 305);
-            BtnSearchPatientByID.Name = "BtnSearchPatientByID";
-            BtnSearchPatientByID.Size = new Size(110, 32);
-            BtnSearchPatientByID.TabIndex = 67;
-            BtnSearchPatientByID.Text = "Buscar";
-            BtnSearchPatientByID.TextImageRelation = TextImageRelation.ImageBeforeText;
-            BtnSearchPatientByID.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            numericUpDown1.Location = new Point(672, 309);
-            numericUpDown1.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(182, 27);
-            numericUpDown1.TabIndex = 66;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            BtnSearchByMonth.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnSearchByMonth.Image = Properties.Resources.search_by_patient_icon;
+            BtnSearchByMonth.Location = new Point(860, 305);
+            BtnSearchByMonth.Name = "BtnSearchByMonth";
+            BtnSearchByMonth.Size = new Size(110, 32);
+            BtnSearchByMonth.TabIndex = 67;
+            BtnSearchByMonth.Text = "Buscar";
+            BtnSearchByMonth.TextImageRelation = TextImageRelation.ImageBeforeText;
+            BtnSearchByMonth.UseVisualStyleBackColor = true;
+            BtnSearchByMonth.Click += BtnSearchByMonth_Click;
             // 
             // label11
             // 
             label11.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.Location = new Point(492, 309);
             label11.Name = "label11";
-            label11.Size = new Size(174, 28);
+            label11.Size = new Size(129, 28);
             label11.TabIndex = 65;
-            label11.Text = "Buscar por ID paciente:";
+            label11.Text = "Buscar por mes:";
             label11.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // BtnNext
@@ -397,7 +364,7 @@
             // 
             DgViewAppointments.AllowUserToAddRows = false;
             DgViewAppointments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DgViewAppointments.Columns.AddRange(new DataGridViewColumn[] { DgColumnAppointmentID, DgColumnServiceName, DgColumnScheduledDate, DgColumnPatientID, DgColumnPatientName, DgColumnPatientSurname });
+            DgViewAppointments.Columns.AddRange(new DataGridViewColumn[] { DgColumnAppointmentID, DgColumnPatientName, DgColumnPatientSurname, DgColumnServiceName, DgColumnScheduledDate });
             DgViewAppointments.Location = new Point(15, 357);
             DgViewAppointments.MultiSelect = false;
             DgViewAppointments.Name = "DgViewAppointments";
@@ -414,6 +381,22 @@
             DgColumnAppointmentID.ReadOnly = true;
             DgColumnAppointmentID.Width = 70;
             // 
+            // DgColumnPatientName
+            // 
+            DgColumnPatientName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DgColumnPatientName.DataPropertyName = "PatientName";
+            DgColumnPatientName.HeaderText = "Nombre del paciente";
+            DgColumnPatientName.Name = "DgColumnPatientName";
+            DgColumnPatientName.ReadOnly = true;
+            // 
+            // DgColumnPatientSurname
+            // 
+            DgColumnPatientSurname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DgColumnPatientSurname.DataPropertyName = "PatientSurname";
+            DgColumnPatientSurname.HeaderText = "Apellido del paciente";
+            DgColumnPatientSurname.Name = "DgColumnPatientSurname";
+            DgColumnPatientSurname.ReadOnly = true;
+            // 
             // DgColumnServiceName
             // 
             DgColumnServiceName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -429,30 +412,6 @@
             DgColumnScheduledDate.HeaderText = "Fecha programada";
             DgColumnScheduledDate.Name = "DgColumnScheduledDate";
             DgColumnScheduledDate.ReadOnly = true;
-            // 
-            // DgColumnPatientID
-            // 
-            DgColumnPatientID.DataPropertyName = "Patient.Id";
-            DgColumnPatientID.HeaderText = "ID paciente";
-            DgColumnPatientID.Name = "DgColumnPatientID";
-            DgColumnPatientID.ReadOnly = true;
-            DgColumnPatientID.Width = 90;
-            // 
-            // DgColumnPatientName
-            // 
-            DgColumnPatientName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DgColumnPatientName.DataPropertyName = "Patient.Name";
-            DgColumnPatientName.HeaderText = "Nombre";
-            DgColumnPatientName.Name = "DgColumnPatientName";
-            DgColumnPatientName.ReadOnly = true;
-            // 
-            // DgColumnPatientSurname
-            // 
-            DgColumnPatientSurname.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DgColumnPatientSurname.DataPropertyName = "Patient.Surname";
-            DgColumnPatientSurname.HeaderText = "Apellido";
-            DgColumnPatientSurname.Name = "DgColumnPatientSurname";
-            DgColumnPatientSurname.ReadOnly = true;
             // 
             // ErrorProvider
             // 
@@ -473,11 +432,33 @@
             BtnCancel.Visible = false;
             BtnCancel.Click += BtnCancel_Click;
             // 
+            // label4
+            // 
+            label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
+            label4.Location = new Point(537, 99);
+            label4.Name = "label4";
+            label4.Size = new Size(183, 27);
+            label4.TabIndex = 75;
+            label4.Text = "Información del paciente";
+            // 
+            // CmbBoxMonths
+            // 
+            CmbBoxMonths.DropDownStyle = ComboBoxStyle.DropDownList;
+            CmbBoxMonths.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CmbBoxMonths.FormattingEnabled = true;
+            CmbBoxMonths.Items.AddRange(new object[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" });
+            CmbBoxMonths.Location = new Point(619, 308);
+            CmbBoxMonths.Name = "CmbBoxMonths";
+            CmbBoxMonths.Size = new Size(235, 28);
+            CmbBoxMonths.TabIndex = 76;
+            // 
             // FrmDentalClinic
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(984, 787);
+            Controls.Add(CmbBoxMonths);
+            Controls.Add(label4);
             Controls.Add(BtnCancel);
             Controls.Add(BtnNext);
             Controls.Add(BtnPrevious);
@@ -485,8 +466,7 @@
             Controls.Add(BtnUpdate);
             Controls.Add(BtnDelete);
             Controls.Add(DgViewAppointments);
-            Controls.Add(BtnSearchPatientByID);
-            Controls.Add(numericUpDown1);
+            Controls.Add(BtnSearchByMonth);
             Controls.Add(label11);
             Controls.Add(BtnSearchById);
             Controls.Add(TxtNumSearchID);
@@ -498,8 +478,6 @@
             Controls.Add(TxtPatientName);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(TxtNumPatientID);
-            Controls.Add(label4);
             Controls.Add(DPickerScheduledDate);
             Controls.Add(label3);
             Controls.Add(TxtServiceName);
@@ -517,9 +495,7 @@
             Load += FrmDentalClinic_Load;
             ((System.ComponentModel.ISupportInitialize)TxtNumSize).EndInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumAppointmentID).EndInit();
-            ((System.ComponentModel.ISupportInitialize)TxtNumPatientID).EndInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumSearchID).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)DgViewAppointments).EndInit();
             ((System.ComponentModel.ISupportInitialize)ErrorProvider).EndInit();
             ResumeLayout(false);
@@ -538,8 +514,6 @@
         private Label label6;
         private Label label3;
         private DateTimePicker DPickerScheduledDate;
-        private Label label4;
-        private NumericUpDown TxtNumPatientID;
         private Label label7;
         private Label label8;
         private TextBox TxtPatientName;
@@ -550,8 +524,7 @@
         private Button BtnSearchById;
         private NumericUpDown TxtNumSearchID;
         private Label label9;
-        private Button BtnSearchPatientByID;
-        private NumericUpDown numericUpDown1;
+        private Button BtnSearchByMonth;
         private Label label11;
         private Button BtnNext;
         private Button BtnPrevious;
@@ -560,12 +533,13 @@
         private Button BtnDelete;
         private DataGridView DgViewAppointments;
         private ErrorProvider ErrorProvider;
+        private Button BtnCancel;
+        private Label label4;
+        private ComboBox CmbBoxMonths;
         private DataGridViewTextBoxColumn DgColumnAppointmentID;
-        private DataGridViewTextBoxColumn DgColumnServiceName;
-        private DataGridViewTextBoxColumn DgColumnScheduledDate;
-        private DataGridViewTextBoxColumn DgColumnPatientID;
         private DataGridViewTextBoxColumn DgColumnPatientName;
         private DataGridViewTextBoxColumn DgColumnPatientSurname;
-        private Button BtnCancel;
+        private DataGridViewTextBoxColumn DgColumnServiceName;
+        private DataGridViewTextBoxColumn DgColumnScheduledDate;
     }
 }
