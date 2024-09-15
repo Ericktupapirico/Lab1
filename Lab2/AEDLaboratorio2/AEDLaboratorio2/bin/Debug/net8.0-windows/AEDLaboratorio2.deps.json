@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "AEDLaboratorio2/1.0.0": {
+        "runtime": {
+          "AEDLaboratorio2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AEDLaboratorio2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

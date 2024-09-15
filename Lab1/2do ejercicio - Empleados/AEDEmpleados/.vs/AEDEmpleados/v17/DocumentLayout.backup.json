@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Repositories\\csharpprojects\\AEDEmpleados\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC7E15C5-7432-4BC3-A1C3-4AAED890350B}|AEDEmpleados\\AEDEmpleados.csproj|d:\\repositories\\csharpprojects\\aedempleados\\aedempleados\\views\\frmemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC7E15C5-7432-4BC3-A1C3-4AAED890350B}|AEDEmpleados\\AEDEmpleados.csproj|solutionrelative:aedempleados\\views\\frmemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC7E15C5-7432-4BC3-A1C3-4AAED890350B}|AEDEmpleados\\AEDEmpleados.csproj|d:\\repositories\\csharpprojects\\aedempleados\\aedempleados\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC7E15C5-7432-4BC3-A1C3-4AAED890350B}|AEDEmpleados\\AEDEmpleados.csproj|solutionrelative:aedempleados\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC7E15C5-7432-4BC3-A1C3-4AAED890350B}|AEDEmpleados\\AEDEmpleados.csproj|d:\\repositories\\csharpprojects\\aedempleados\\aedempleados\\views\\frmemployeesalary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC7E15C5-7432-4BC3-A1C3-4AAED890350B}|AEDEmpleados\\AEDEmpleados.csproj|solutionrelative:aedempleados\\views\\frmemployeesalary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC7E15C5-7432-4BC3-A1C3-4AAED890350B}|AEDEmpleados\\AEDEmpleados.csproj|d:\\repositories\\csharpprojects\\aedempleados\\aedempleados\\models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC7E15C5-7432-4BC3-A1C3-4AAED890350B}|AEDEmpleados\\AEDEmpleados.csproj|solutionrelative:aedempleados\\models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmMain.cs",
+              "DocumentMoniker": "D:\\Repositories\\csharpprojects\\AEDEmpleados\\AEDEmpleados\\Views\\FrmMain.cs",
+              "RelativeDocumentMoniker": "AEDEmpleados\\Views\\FrmMain.cs",
+              "ToolTip": "D:\\Repositories\\csharpprojects\\AEDEmpleados\\AEDEmpleados\\Views\\FrmMain.cs",
+              "RelativeToolTip": "AEDEmpleados\\Views\\FrmMain.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAFcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T13:39:20.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmEmployeeSalary.cs",
+              "DocumentMoniker": "D:\\Repositories\\csharpprojects\\AEDEmpleados\\AEDEmpleados\\Views\\FrmEmployeeSalary.cs",
+              "RelativeDocumentMoniker": "AEDEmpleados\\Views\\FrmEmployeeSalary.cs",
+              "ToolTip": "D:\\Repositories\\csharpprojects\\AEDEmpleados\\AEDEmpleados\\Views\\FrmEmployeeSalary.cs",
+              "RelativeToolTip": "AEDEmpleados\\Views\\FrmEmployeeSalary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T13:39:15.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmEmployee.cs",
+              "DocumentMoniker": "D:\\Repositories\\csharpprojects\\AEDEmpleados\\AEDEmpleados\\Views\\FrmEmployee.cs",
+              "RelativeDocumentMoniker": "AEDEmpleados\\Views\\FrmEmployee.cs",
+              "ToolTip": "D:\\Repositories\\csharpprojects\\AEDEmpleados\\AEDEmpleados\\Views\\FrmEmployee.cs",
+              "RelativeToolTip": "AEDEmpleados\\Views\\FrmEmployee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T13:38:35.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeModel.cs",
+              "DocumentMoniker": "D:\\Repositories\\csharpprojects\\AEDEmpleados\\AEDEmpleados\\Models\\EmployeeModel.cs",
+              "RelativeDocumentMoniker": "AEDEmpleados\\Models\\EmployeeModel.cs",
+              "ToolTip": "D:\\Repositories\\csharpprojects\\AEDEmpleados\\AEDEmpleados\\Models\\EmployeeModel.cs",
+              "RelativeToolTip": "AEDEmpleados\\Models\\EmployeeModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T13:26:56.63Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
