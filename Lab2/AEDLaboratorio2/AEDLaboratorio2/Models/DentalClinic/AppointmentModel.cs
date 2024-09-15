@@ -18,16 +18,39 @@ namespace AEDLaboratorio2.Models.DentalClinic
             return (true, "Arreglo creado exitosamente");
         }
 
-        private int Search(int id)
+        private int SearchById(int id)
+        {
+            int index = -1;
+            for (var i = 0; i < _quantity; i++)
+                if (_appointments[i].Id == id)
+                {
+                    index = i;
+                    return index;
+                }
+
+            return index;
+        }
+
+        private int FindIndexToInsert(DateTime scheduledDate)
         {
             int index = 0;
-            while (index < _quantity && _appointments[index].Id < id)
+
+            while (index < _quantity && _appointments[index].ScheduledDate < scheduledDate)
                 index++;
 
-            if (index >= _quantity || _appointments[index].Id > id)
+            if (index >= _quantity || _appointments[index].ScheduledDate > scheduledDate)
                 return -index;
 
             return index;
+        }
+
+        private bool IsExistingId(int id)
+        {
+            for (var i = 0; i < _quantity; i++)
+                if (_appointments[i].Id == id)
+                    return true;
+
+            return false;
         }
 
         public (bool result, string message) Add(Appointment appointment)
@@ -38,7 +61,10 @@ namespace AEDLaboratorio2.Models.DentalClinic
             if (_quantity >= _size)
                 return (false, "No hay espacio en el arreglo para un nueva cita");
 
-            var index = Search(appointment.Id);
+            if (IsExistingId(appointment.Id))
+                return (false, "Ya existe una cita con el ID ingresado");
+
+            var index = FindIndexToInsert(appointment.ScheduledDate);
             if (index > 0)
                 return (false, "Ya existe una cita con el ID ingresado");
 
@@ -60,11 +86,13 @@ namespace AEDLaboratorio2.Models.DentalClinic
             if (_quantity == 0)
                 return (false, "No hay cita para actualizar");
 
-            var index = Search(appointment.Id);
-            if (index < 0)
-                return (false, "No existe una cita con el ID ingresado");
+            var (result, message) = Delete(appointment.Id);
+            if (!result)
+                return (false, message);
 
-            _appointments[index] = appointment;
+            var (result1, message1) = Add(appointment);
+            if (!result1)
+                return (false, message1);
 
             return (true, "Cita actualizada exitosamente");
         }
@@ -77,7 +105,7 @@ namespace AEDLaboratorio2.Models.DentalClinic
             if (_quantity == 0)
                 return (false, "No hay citas para eliminar");
 
-            var index = Search(id);
+            var index = SearchById(id);
             if (index < 0)
                 return (false, "No existe una cita con el ID ingresado");
 
@@ -97,7 +125,7 @@ namespace AEDLaboratorio2.Models.DentalClinic
             if (_quantity == 0)
                 return (false, "No hay citas para buscar", null);
 
-            var index = Search(id);
+            var index = SearchById(id);
 
             return id < 0 ? (false, "No existe una cita con el ID ingresado", null) :
                 (true, $"Cita con Id: {id} encontrado", _appointments[index]);
