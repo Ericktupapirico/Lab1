@@ -2,7 +2,7 @@ namespace AEDLaboratorio2.Views
 {
     public partial class FrmMain : Form
     {
-        private FrmChurch? _frmChurch;
+        private ParishionerView? _frmChurch;
         private FrmDentalClinic? _frmDentalClinic;
 
         public FrmMain()
