@@ -14,10 +14,7 @@ namespace AEDLaboratorio2.Views
 
         private void BtnSetSize_Click(object sender, EventArgs e)
         {
-            var (result, message) = _parishionerModel.InitializeArray(Convert.ToInt32(TxtNumSize.Value));
-            if (!result)
-                MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+                  }
 
     }
 }

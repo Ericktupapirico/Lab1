@@ -2,135 +2,61 @@
 
 namespace AEDLaboratorio2.Models.Church
 {
-    public class ParishionerModel
-    {
-        private int _size = 0, _quantity = 0;
-        private static Parishioner[] _parishioners = [];
-
-        public (bool result, string message) InitializeArray(int size)
+   
+        public class ParishionerModel
         {
-            if (size <= 0)
-                return (false, "Tamaño del arreglo debe ser > 0");
+            public static readonly ParishionerModel InstanceParishioner = new();//Se crea una instancia unica, mas que todo para evitar errores a futuro y asegurar un mejor manejo de la clase
+            public static ParishionerModel arrayLogic { get { return InstanceParishioner; } }//se vuelve publica la instancia
+            public Parishioner[] parishionerArray;//arreglo donde se guardaran los objetos
+            int Size = 0, Quantity = 0;//Cantidad de registros y tamanio del arreglo
+            public ParishionerModel()
+            {
+                parishionerArray = new Parishioner[Size];//se le asigna el tamanio al arreglo
+            }
 
-            _size = size;
-            _parishioners = new Parishioner[_size];
+            public void AddParishioner(Parishioner parishioner)//Se verifica si el tamanio es menor a la cantidad de registro, de caso contrario se redomensiona el arreglo y se almeneca el objeto y la cantidad aumenta
+            {
 
-            return (true, "Arreglo creado exitosamente");
-        }
-
-        private int SearchById(int id)
-        {
-            int index = -1;
-            for (var i = 0; i < _quantity; i++)
-                if (_parishioners[i].Id == id)
+                if (Size <= Quantity)
                 {
-                    index = i;
-                    return index;
+                    Size = Size == 0 ? 1 : Size + 1;
+                    Array.Resize(ref parishionerArray, Size);
                 }
+                parishionerArray[Quantity] = parishioner;
+                Array.Sort(parishionerArray, (firstParishion, SecondParishion) => SecondParishion?.Amount.CompareTo(firstParishion?.Amount) ?? 0);
+                //compara los indices del arreglo en funcion del monto de diezmos de 2 en 2, si el primeo es mayor se mueve hacua arriba de caso contrsrio se mueva hacia abjo, si son iguales no hace su accion y sigue comparando otros indices
+                MessageBox.Show("Parishioner save successfuly", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ++Quantity;
+            }
 
-            return index;
+            public Parishioner[] GetParisioner() { return parishionerArray; }//devuelve el arreglo de objetos para su visualizacion
+
+            public bool DeleteParishioner(int id)//usando el id se ubica al objeto que se desea eliminar
+            {
+                var index = Array.FindIndex(parishionerArray, p => p.ID.Equals(id) == true);
+                if (index < 0) return false;
+
+                for (int i = index; i < Quantity - 1; i++)
+                {
+                    parishionerArray[i] = parishionerArray[i + 1];//desplaza todos los objetos hacia la izquieda menos al deseado dejandolo de ultimo a la derecha y se disminuye el tamanio para desechar el objeto elimminado
+                }
+                --Quantity;
+                Array.Resize(ref parishionerArray, Quantity);
+                return true;
+
+            }
+
+            public Parishioner? SearchParishioner(int id)
+            {
+                return Array.Find(parishionerArray, p => p.ID.Equals(id));//metodo para filtrar un feligrense por su id
+            }
+            public bool UpdateParishioner(Parishioner? parishioner)
+            {
+                if (parishioner == null) return false;
+                var index = Array.FindIndex(parishionerArray, p => p.ID.Equals(parishioner?.ID) == true);//Recibe el nuevo objeto con la informacion actualizada y se guarda en la misma posicion
+                if (index < 0) return false;
+                parishionerArray[index] = parishioner;
+                return true;
+            }
         }
-
-        private bool IsExistingId(int id)
-        {
-            for (var i = 0; i < _quantity; i++)
-                if (_parishioners[i].Id == id)
-                    return true;
-
-            return false;
-        }
-
-        private int FindIndexToInsert(decimal tithe)
-        {
-            int index = 0;
-
-            /*
-             * Lógica para encontrar la posición en el arreglo donde debe de ir el nuevo feligrés
-             * en base a su total de diezmos dados, el total de diezmos dados se saca sumando cada
-             * diezmo que haya dado el feligrés...
-             */
-
-            return index;
-        }
-
-        public (bool result, string message) Add(Parishioner parishioner)
-        {
-            if (_size == 0)
-                return (false, "Primero debe asignar un tamaño al arreglo");
-
-            if (_quantity >= _size)
-                return (false, "No hay espacio en el arreglo para un nuevo feligrés");
-
-            if (IsExistingId(parishioner.Id))
-                return (false, "Ya existe un feligrés con el ID ingresado");
-
-            var index = SearchById(parishioner.Id);
-            if (index > 0)
-                return (false, "Ya existe un feligrés con el ID ingresado");
-
-            index = -index;
-            for (var i = _quantity; i > index; i--)
-                _parishioners[i] = _parishioners[i - 1];
-
-            _parishioners[index] = parishioner;
-            ++_quantity;
-
-            return (true, "Feligrés registrado exitosamente");
-        }
-
-        public (bool result, string message) Update(Parishioner parishioner)
-        {
-            if (_size == 0)
-                return (false, "Primero debe asignar un tamaño al arreglo");
-
-            if (_quantity == 0)
-                return (false, "No hay feligrés para actualizar");
-
-            var (result, message) = Delete(parishioner.Id);
-            if (!result)
-                return (false, message);
-
-            var (result1, message1) = Add(parishioner);
-            if (!result1)
-                return (false, message1);
-
-            return (true, "Feligrés actualizado exitosamente");
-        }
-
-        public (bool result, string message) Delete(int id)
-        {
-            if (_size == 0)
-                return (false, "Primero debe asignar un tamaño al arreglo");
-
-            if (_quantity == 0)
-                return (false, "No hay feligrés para eliminar");
-
-            var index = SearchById(id);
-            if (index < 0)
-                return (false, "No existe un feligrés con el ID ingresado");
-
-            for (int i = index; i < _quantity - 1; i++)
-                _parishioners[i] = _parishioners[i + 1];
-
-            --_quantity;
-
-            return (true, "Feligrés eliminado exitosamente");
-        }
-
-        public (bool result, string message, Parishioner? parishioner) GetById(int id)
-        {
-            if (_size == 0)
-                return (false, "Primero debe asignar un tamaño al arreglo", null);
-
-            if (_quantity == 0)
-                return (false, "No hay feligrés para buscar", null);
-
-            var index = SearchById(id);
-
-            return id < 0 ? (false, "No existe un feligrés con el ID ingresado", null) :
-                (true, $"Feligrés con Id: {id} encontrado", _parishioners[index]);
-        }
-
-        public Parishioner[] GetAll() => _parishioners.Take(_quantity).ToArray();
     }
-}
