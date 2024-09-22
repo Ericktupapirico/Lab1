@@ -19,6 +19,6 @@ namespace AEDLaboratorio2.Entities.Church
     }
 }
 /*
- * Entidades por la cual estaremos trabajando durante el manejo del arreglo de objetos
+ * Entidades en la cual estaremos trabajando durante el manejo del arreglo de objetos
  */
 
