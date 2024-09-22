@@ -77,7 +77,7 @@
             BtnClearForm.Text = "Clean";
             BtnClearForm.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnClearForm.UseVisualStyleBackColor = true;
-       
+            BtnClearForm.Click += BtnClearForm_Click;
             // 
             // TxtName
             // 
@@ -87,7 +87,7 @@
             TxtName.Name = "TxtName";
             TxtName.Size = new Size(438, 32);
             TxtName.TabIndex = 59;
-         
+            TxtName.KeyPress += TxtName_KeyPress;
             // 
             // TxtAddress
             // 
@@ -112,7 +112,7 @@
             BtnSave.Text = "Save";
             BtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnSave.UseVisualStyleBackColor = true;
- 
+            BtnSave.Click += BtnSave_Click;
             // 
             // label6
             // 
@@ -280,7 +280,7 @@
             BtnSearchById.Text = "Search";
             BtnSearchById.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnSearchById.UseVisualStyleBackColor = true;
-        
+            BtnSearchById.Click += BtnSearchById_Click;
             // 
             // TxtNumSearchID
             // 
@@ -317,7 +317,7 @@
             BtnNext.Text = "Next";
             BtnNext.TextImageRelation = TextImageRelation.TextBeforeImage;
             BtnNext.UseVisualStyleBackColor = true;
-
+            BtnNext.Click += BtnNext_Click;
             // 
             // BtnPrevious
             // 
@@ -332,7 +332,7 @@
             BtnPrevious.Text = "Back";
             BtnPrevious.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnPrevious.UseVisualStyleBackColor = true;
-      
+            BtnPrevious.Click += BtnPrevious_Click;
             // 
             // BtnShowAll
             // 
@@ -347,7 +347,7 @@
             BtnShowAll.Text = "Show Details";
             BtnShowAll.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnShowAll.UseVisualStyleBackColor = true;
-         
+            BtnShowAll.Click += BtnShowAll_Click;
             // 
             // BtnUpdate
             // 
@@ -362,7 +362,7 @@
             BtnUpdate.Text = "Edit";
             BtnUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnUpdate.UseVisualStyleBackColor = true;
-        
+            BtnUpdate.Click += BtnUpdate_Click;
             // 
             // BtnDelete
             // 
@@ -377,7 +377,7 @@
             BtnDelete.Text = "Delete";
             BtnDelete.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnDelete.UseVisualStyleBackColor = true;
-       
+            BtnDelete.Click += BtnDelete_Click;
             // 
             // textCant
             // 
@@ -387,7 +387,7 @@
             textCant.Name = "textCant";
             textCant.Size = new Size(317, 32);
             textCant.TabIndex = 85;
-         
+            textCant.KeyPress += textCant_KeyPress;
             // 
             // label7
             // 
@@ -429,7 +429,7 @@
             btnSaveUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSaveUpdate.UseVisualStyleBackColor = true;
             btnSaveUpdate.Visible = false;
-    
+            btnSaveUpdate.Click += btnSaveUpdate_Click;
             // 
             // ParishionerView
             // 
@@ -469,7 +469,7 @@
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "ParishionerView";
             Text = "ParishionerView";
-          
+            Load += ParishionerView_Load;
             ((System.ComponentModel.ISupportInitialize)dgPrintParishioner).EndInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumSearchID).EndInit();
             ResumeLayout(false);
