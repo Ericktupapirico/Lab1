@@ -268,6 +268,7 @@ namespace AEDLaboratorio2.Views
             }
             UpdateParishioner(parishionerSelected);
             CleanBox();
+            PrintParishioners();
             MessageBox.Show("Parishioner update sucessfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
         /*
