@@ -1,24 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\views\\parishionerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\views\\parishionerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\util\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\util\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\models\\church\\parishionermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\models\\church\\parishionermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\entities\\church\\parishioner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\entities\\church\\parishioner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\Repositories\\aed_labs\\Lab2\\AEDLaboratorio2\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +17,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -51,55 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ParishionerView.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\ParishionerView.cs",
-              "RelativeDocumentMoniker": "AEDLaboratorio2\\Views\\ParishionerView.cs",
-              "ToolTip": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\ParishionerView.cs",
-              "RelativeToolTip": "AEDLaboratorio2\\Views\\ParishionerView.cs",
-              "ViewState": "AgIAAOUAAAAAAAAAAAAqwA4BAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:27:31.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Validations.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Util\\Validations.cs",
-              "RelativeDocumentMoniker": "AEDLaboratorio2\\Util\\Validations.cs",
-              "ToolTip": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Util\\Validations.cs",
-              "RelativeToolTip": "AEDLaboratorio2\\Util\\Validations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:27:07.268Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ParishionerModel.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
-              "RelativeDocumentMoniker": "AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
-              "ToolTip": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
-              "RelativeToolTip": "AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:25:48.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Parishioner.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
-              "RelativeDocumentMoniker": "AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
-              "ToolTip": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
-              "RelativeToolTip": "AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:25:01.404Z"
             }
           ]
         }

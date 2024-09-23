@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "AEDLaboratorio2\\Views\\ParishionerView.cs",
               "ToolTip": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\ParishionerView.cs",
               "RelativeToolTip": "AEDLaboratorio2\\Views\\ParishionerView.cs",
-              "ViewState": "AgIAABEBAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAqwA4BAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T18:27:31.495Z",
               "EditorCaption": ""
@@ -75,8 +75,7 @@
               "RelativeToolTip": "AEDLaboratorio2\\Util\\Validations.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:27:07.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T18:27:07.268Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:25:48.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T18:25:48.271Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:25:01.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T18:25:01.404Z"
             }
           ]
         }
