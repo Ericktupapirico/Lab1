@@ -1,4 +1,4 @@
-﻿using Labdefense.Models;
+﻿using Labdefense.Entity;
 using Labdefense.Util;
 using System;
 using System.Collections.Generic;
@@ -16,9 +16,9 @@ namespace Labdefense.Views
 {
     public partial class UpdatePayView : Form
     {
-        private Validations validations;
-        public event Action OnDataUpdate;
-        private Payments student;
+        private readonly Validations validations;
+        public event Action? OnDataUpdate;
+        private readonly Payments? student;
 
         public UpdatePayView(Payments payments)
         {
@@ -39,10 +39,10 @@ namespace Labdefense.Views
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            TextBox[] textBoxes = { textCarnet, textCordobas };
-            TextBox[] textCarnetValid = { textCarnet };
+            TextBox[] textBoxes = [textCarnet, textCordobas];
+            TextBox[] textCarnetValid = [textCarnet];
             if (validations.IsValidCarnet(textCarnetValid))
             {
                 MessageBox.Show("Por favor, rellena todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

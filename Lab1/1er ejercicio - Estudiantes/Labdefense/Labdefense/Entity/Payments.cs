@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labdefense.Models
+namespace Labdefense.Entity
 {
     public class Payments
     {
@@ -16,6 +16,6 @@ namespace Labdefense.Models
         public float Cordobas { get; set; }
         public DateTime DatePay { get; set; }
         public int CantPayments { get; set; }
-      
+
     }
 }

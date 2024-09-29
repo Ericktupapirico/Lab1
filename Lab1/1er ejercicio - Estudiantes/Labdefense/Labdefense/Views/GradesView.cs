@@ -1,4 +1,5 @@
-﻿using Labdefense.Models;
+﻿using Labdefense.Entity;
+using Labdefense.Models;
 using Labdefense.Util;
 using System;
 using System.Collections.Generic;
@@ -14,19 +15,16 @@ namespace Labdefense.Views
 {
     public partial class GradesView : Form
     {
-        private Validations validations;
+        private readonly Validations validations;
 
         public GradesView()
         {
             InitializeComponent();
             validations = new Validations();
-            textP1.KeyPress += new KeyPressEventHandler(validations.ValidateNumberInput);
-            textPar2.KeyPress += new KeyPressEventHandler(validations.ValidateNumberInput);
-            textPro.KeyPress += new KeyPressEventHandler(validations.ValidateNumberInput);
-            textTest.KeyPress += new KeyPressEventHandler(validations.ValidateNumberInput);
+       
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void BtnSearch_Click(object sender, EventArgs e)
         {
             var Carnet = textSearch.Text;
             var _students = ArrayLogic.Arraylog.SearchStudent(Carnet);
@@ -45,17 +43,12 @@ namespace Labdefense.Views
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = ArrayLogic.Arraylog.GetStudents();
-
-
-
             dataGridView1.Columns["identification"].Visible = false;
-
             dataGridView1.Columns["Number"].Visible = false;
-
             dataGridView1.Columns["dateRegister"].Visible = false;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
             if (dataGridView1.SelectedRows.Count == 0)
@@ -77,7 +70,7 @@ namespace Labdefense.Views
 
             }
 
-            TextBox[] textBoxes = { textPar2, textP1, textTest, textPro };
+            TextBox[] textBoxes = [textPar2, textP1, textTest, textPro];
             if (validations.TextNullEmpty(textBoxes))
             {
                 MessageBox.Show("Por favor, rellena todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -88,7 +81,7 @@ namespace Labdefense.Views
             studentselect.IIPar = float.Parse(textPar2.Text);
             studentselect.Project = float.Parse(textPro.Text);
             studentselect.Test = float.Parse(textTest.Text);
-            studentselect.Finalgrades = studentselect.finalgrades();
+            studentselect.Finalgrades = studentselect.FinalGrades();
             ArrayLogic.Arraylog.SaveGrades(studentselect);
             PrintStudents();
 
@@ -100,16 +93,11 @@ namespace Labdefense.Views
             PrintStudents();
         }
 
-        private void textSearch_TextChanged(object sender, EventArgs e)
+        private void TextSearch_TextChanged(object sender, EventArgs e)
         {
-
-
             PrintStudents();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

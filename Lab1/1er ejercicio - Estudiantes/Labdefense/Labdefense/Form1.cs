@@ -25,7 +25,7 @@ namespace Labdefense
                 PanelFather.Controls.RemoveAt(0);
             }
             Form formHijo = form;
-            form.TopLevel = false;
+            formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
             PanelFather.Controls.Add(formHijo);
@@ -33,12 +33,12 @@ namespace Labdefense
         }
 
 
-        private void btnMin_Click(object sender, EventArgs e)
+        private void BtnMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnMaxim_Click(object sender, EventArgs e)
+        private void BtnMaxim_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             btnMaxim.Visible = false;
@@ -46,7 +46,7 @@ namespace Labdefense
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
             btnMaxim.Visible = true;
@@ -54,34 +54,32 @@ namespace Labdefense
 
         }
 
-        private void btnClose_Click_1(object sender, EventArgs e)
+        private void BtnClose_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
-
+        private void BtnRegister_Click(object sender, EventArgs e)
         {
-
-            OpenForms(new RegisterView());
+         OpenForms(new RegisterView());
         }
 
-        private void btnGrades_Click(object sender, EventArgs e)
+        private void BtnGrades_Click(object sender, EventArgs e)
         {
             OpenForms(form: new GradesView());
         }
 
-        private void btnPayments_Click(object sender, EventArgs e)
+        private void BtnPayments_Click(object sender, EventArgs e)
         {
             OpenForms(form: new PaymentsView());
         }
 
-        private void btnReports_Click(object sender, EventArgs e)
+        private void BtnReports_Click(object sender, EventArgs e)
         {
             OpenForms(form: new ReportView());
         }
 
-        private void btnStudents_Click(object sender, EventArgs e)
+        private void BtnStudents_Click(object sender, EventArgs e)
         {
             OpenForms(form: new StudentsView());
         }

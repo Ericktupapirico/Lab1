@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\",
+  "WorkspaceRootPath": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\views\\parishionerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\views\\parishionerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\util\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\util\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\models\\church\\parishionermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\models\\church\\parishionermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\models\\church\\parishionermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\entities\\church\\parishioner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\views\\frmdentalclinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\views\\frmdentalclinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\entities\\church\\parishioner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\entities\\church\\parishioner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\views\\parishionerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\views\\parishionerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\views\\parishionerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\views\\parishionerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|c:\\users\\erick\\aed-labs\\aed-labs\\lab2\\aedlaboratorio2\\aedlaboratorio2\\util\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC793D70-DF0A-4932-8B1A-FA074FF896D6}|AEDLaboratorio2\\AEDLaboratorio2.csproj|solutionrelative:aedlaboratorio2\\util\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -49,57 +57,81 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmDentalClinic.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\FrmDentalClinic.cs",
+              "RelativeDocumentMoniker": "AEDLaboratorio2\\Views\\FrmDentalClinic.cs",
+              "ToolTip": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\FrmDentalClinic.cs",
+              "RelativeToolTip": "AEDLaboratorio2\\Views\\FrmDentalClinic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T04:02:54.077Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ParishionerView.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\ParishionerView.cs",
+              "DocumentIndex": 3,
+              "Title": "ParishionerView.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\ParishionerView.cs",
               "RelativeDocumentMoniker": "AEDLaboratorio2\\Views\\ParishionerView.cs",
-              "ToolTip": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\ParishionerView.cs",
+              "ToolTip": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\ParishionerView.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AEDLaboratorio2\\Views\\ParishionerView.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T02:08:28.495Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ParishionerView.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\ParishionerView.cs",
+              "RelativeDocumentMoniker": "AEDLaboratorio2\\Views\\ParishionerView.cs",
+              "ToolTip": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\ParishionerView.cs",
               "RelativeToolTip": "AEDLaboratorio2\\Views\\ParishionerView.cs",
-              "ViewState": "AgIAAOUAAAAAAAAAAAAqwA4BAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4BAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T18:27:31.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Validations.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Util\\Validations.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Util\\Validations.cs",
               "RelativeDocumentMoniker": "AEDLaboratorio2\\Util\\Validations.cs",
-              "ToolTip": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Util\\Validations.cs",
+              "ToolTip": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Util\\Validations.cs",
               "RelativeToolTip": "AEDLaboratorio2\\Util\\Validations.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:27:07.268Z"
+              "WhenOpened": "2024-09-22T18:27:07.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ParishionerModel.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
+              "RelativeDocumentMoniker": "AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
+              "ToolTip": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
+              "RelativeToolTip": "AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T18:25:48.271Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ParishionerModel.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
-              "RelativeDocumentMoniker": "AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
-              "ToolTip": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
-              "RelativeToolTip": "AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:25:48.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Parishioner.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
               "RelativeDocumentMoniker": "AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
-              "ToolTip": "C:\\Users\\erick\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
+              "ToolTip": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
               "RelativeToolTip": "AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:25:01.404Z"
+              "WhenOpened": "2024-09-22T18:25:01.404Z",
+              "EditorCaption": ""
             }
           ]
         }

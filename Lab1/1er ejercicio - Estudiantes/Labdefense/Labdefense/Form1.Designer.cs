@@ -80,7 +80,7 @@
             btnNormal.TabIndex = 1;
             btnNormal.UseVisualStyleBackColor = true;
             btnNormal.Visible = false;
-            btnNormal.Click += button4_Click;
+            btnNormal.Click += Button4_Click;
             // 
             // btnMin
             // 
@@ -95,7 +95,7 @@
             btnMin.Size = new Size(35, 35);
             btnMin.TabIndex = 1;
             btnMin.UseVisualStyleBackColor = true;
-            btnMin.Click += btnMin_Click;
+            btnMin.Click += BtnMin_Click;
             // 
             // btnMaxim
             // 
@@ -110,7 +110,7 @@
             btnMaxim.Size = new Size(35, 35);
             btnMaxim.TabIndex = 2;
             btnMaxim.UseVisualStyleBackColor = true;
-            btnMaxim.Click += btnMaxim_Click;
+            btnMaxim.Click += BtnMaxim_Click;
             // 
             // btnClose
             // 
@@ -125,7 +125,7 @@
             btnClose.Size = new Size(35, 35);
             btnClose.TabIndex = 0;
             btnClose.UseVisualStyleBackColor = true;
-            btnClose.Click += btnClose_Click_1;
+            btnClose.Click += BtnClose_Click_1;
             // 
             // panel2
             // 
@@ -174,7 +174,7 @@
             btnStudents.TabIndex = 11;
             btnStudents.Text = "Students";
             btnStudents.UseVisualStyleBackColor = true;
-            btnStudents.Click += btnStudents_Click;
+            btnStudents.Click += BtnStudents_Click;
             // 
             // label2
             // 
@@ -233,7 +233,7 @@
             btnReports.TabIndex = 6;
             btnReports.Text = "Reports";
             btnReports.UseVisualStyleBackColor = true;
-            btnReports.Click += btnReports_Click;
+            btnReports.Click += BtnReports_Click;
             // 
             // panel6
             // 
@@ -260,7 +260,7 @@
             btnPayments.TabIndex = 4;
             btnPayments.Text = "Payments";
             btnPayments.UseVisualStyleBackColor = true;
-            btnPayments.Click += btnPayments_Click;
+            btnPayments.Click += BtnPayments_Click;
             // 
             // panel5
             // 
@@ -287,7 +287,7 @@
             btnGrades.TabIndex = 2;
             btnGrades.Text = "Grades";
             btnGrades.UseVisualStyleBackColor = true;
-            btnGrades.Click += btnGrades_Click;
+            btnGrades.Click += BtnGrades_Click;
             // 
             // panel4
             // 
@@ -314,7 +314,7 @@
             btnRegister.TabIndex = 0;
             btnRegister.Text = "Register ";
             btnRegister.UseVisualStyleBackColor = true;
-            btnRegister.Click += btnRegister_Click;
+            btnRegister.Click += BtnRegister_Click;
             // 
             // PanelFather
             // 

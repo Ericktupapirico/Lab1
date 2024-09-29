@@ -76,7 +76,7 @@
             btnExport.Size = new Size(46, 40);
             btnExport.TabIndex = 1;
             btnExport.UseVisualStyleBackColor = true;
-            btnExport.Click += btnExport_Click;
+            btnExport.Click += BtnExport_Click;
             // 
             // ReportView
             // 

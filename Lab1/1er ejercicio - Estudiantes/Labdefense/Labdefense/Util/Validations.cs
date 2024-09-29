@@ -10,9 +10,9 @@ namespace Labdefense.Util
 {
     public class Validations
     {
-        private ErrorProvider errorProvider = new ErrorProvider();
+        private readonly ErrorProvider errorProvider = new();
 
-        public void ClearText(TextBox[] textBoxes)
+        public static void ClearText(TextBox[] textBoxes)
         {
             foreach (TextBox box in textBoxes)
             {
@@ -50,7 +50,7 @@ namespace Labdefense.Util
             bool idWrong = false;
             string pattern = @"^\d{3}-\d{6}-\d{4}[A-Z]$";
 
-            Regex regex = new Regex(pattern);
+            Regex regex = new(pattern);
             foreach (TextBox txt in identification)
             {
                 if (!regex.IsMatch(txt.Text))
@@ -79,7 +79,7 @@ namespace Labdefense.Util
             bool carnetWrong = false;
 
             string patterncarnet = @"^20\d{2}-\d{4}[A-Z]$";
-            Regex regexcarnet = new Regex(patterncarnet);
+            Regex regexcarnet = new(patterncarnet);
 
             foreach (TextBox txtcarnet in carnet)
             {
@@ -101,7 +101,7 @@ namespace Labdefense.Util
 
             return carnetWrong;
         }
-        public void ValidateNumberInput(object sender, KeyPressEventArgs e)
+      /*  public void ValidateNumberInput(object sender, KeyPressEventArgs e)
         {
 
             char ch = e.KeyChar;
@@ -120,14 +120,14 @@ namespace Labdefense.Util
                 e.Handled = true;
                 return;
             }
-        }
+        }*/
 
         public bool NumberValif(TextBox[] Num)
         {
             bool numwrong = false;
             string pattern = @"^d\{8}$";
 
-            Regex regex = new Regex(pattern);
+            Regex regex = new(pattern);
             foreach (TextBox txt in Num)
             {
                 if (!regex.IsMatch(txt.Text))

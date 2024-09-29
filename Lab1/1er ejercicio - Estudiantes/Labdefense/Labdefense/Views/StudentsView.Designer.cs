@@ -81,12 +81,13 @@
             button1.Size = new Size(33, 29);
             button1.TabIndex = 1;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += Button1_Click;
             // 
             // textSearch
             // 
             textSearch.BackColor = SystemColors.Info;
             textSearch.Location = new Point(26, 38);
+            textSearch.MaxLength = 15;
             textSearch.Name = "textSearch";
             textSearch.Size = new Size(125, 27);
             textSearch.TabIndex = 2;
@@ -103,7 +104,7 @@
             btnDelete.Size = new Size(32, 29);
             btnDelete.TabIndex = 3;
             btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
+            btnDelete.Click += BtnDelete_Click;
             // 
             // button3
             // 
@@ -115,7 +116,7 @@
             button3.Size = new Size(32, 29);
             button3.TabIndex = 4;
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            button3.Click += Button3_Click;
             // 
             // button2
             // 
@@ -127,7 +128,7 @@
             button2.Size = new Size(36, 29);
             button2.TabIndex = 5;
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += Button2_Click;
             // 
             // StudentsView
             // 

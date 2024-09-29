@@ -14,7 +14,7 @@ namespace Labdefense.Views
 {
     public partial class ReportView : Form
     {
-        private ExportToExcel ExportToExcel;
+        private ExportToExcel? ExportToExcel;
         public ReportView()
         {
             InitializeComponent();
@@ -33,9 +33,9 @@ namespace Labdefense.Views
             PrintStudents();
         }
 
-        private void btnExport_Click(object sender, EventArgs e)
+        private void BtnExport_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dlg = new SaveFileDialog()
+            SaveFileDialog dlg = new()
             {
                 Filter = "Excel Files (*.xlsx)|*.xlsx",
                 FileName = "PaymentsReport.xlsx"
@@ -43,7 +43,7 @@ namespace Labdefense.Views
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                ExportToExcel.ExportCloseXml(dataGridView1, dlg.FileName);
+                ExportToExcel?.ExportCloseXml(dataGridView1, dlg.FileName);
                 MessageBox.Show("Datos exportados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }

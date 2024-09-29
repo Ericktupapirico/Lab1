@@ -91,17 +91,17 @@
             btnSearch.Size = new Size(29, 29);
             btnSearch.TabIndex = 4;
             btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
+            btnSearch.Click += BtnSearch_Click;
             // 
             // textSearch
             // 
             textSearch.BackColor = SystemColors.Info;
             textSearch.Location = new Point(43, 50);
-            textSearch.MaxLength = 2;
+            textSearch.MaxLength = 15;
             textSearch.Name = "textSearch";
             textSearch.Size = new Size(125, 27);
             textSearch.TabIndex = 5;
-            textSearch.TextChanged += textSearch_TextChanged;
+            textSearch.TextChanged += TextSearch_TextChanged;
             // 
             // btnSave
             // 
@@ -113,7 +113,7 @@
             btnSave.Size = new Size(33, 29);
             btnSave.TabIndex = 6;
             btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;
+            btnSave.Click += BtnSave_Click;
             // 
             // textP1
             // 
