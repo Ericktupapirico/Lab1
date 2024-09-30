@@ -72,7 +72,11 @@
               "RelativeDocumentMoniker": "AEDLaboratorio2\\Views\\ParishionerView.cs",
               "ToolTip": "C:\\Users\\erick\\aed-labs\\aed-labs\\Lab2\\AEDLaboratorio2\\AEDLaboratorio2\\Views\\ParishionerView.cs",
               "RelativeToolTip": "AEDLaboratorio2\\Views\\ParishionerView.cs",
+<<<<<<< HEAD
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4BAAAgAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAOUAAAAAAAAAAAAqwA4BAAAgAAAAAAAAAA==",
+>>>>>>> 1d87afb460fd1fd97238686e8def4622816daa05
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T18:27:31.495Z",
               "EditorCaption": ""
@@ -87,8 +91,7 @@
               "RelativeToolTip": "AEDLaboratorio2\\Util\\Validations.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:27:07.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T18:27:07.268Z"
             },
             {
               "$type": "Document",
@@ -100,8 +103,7 @@
               "RelativeToolTip": "AEDLaboratorio2\\Models\\Church\\ParishionerModel.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:25:48.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T18:25:48.271Z"
             },
             {
               "$type": "Document",
@@ -113,8 +115,7 @@
               "RelativeToolTip": "AEDLaboratorio2\\Entities\\Church\\Parishioner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T18:25:01.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T18:25:01.404Z"
             }
           ]
         }
