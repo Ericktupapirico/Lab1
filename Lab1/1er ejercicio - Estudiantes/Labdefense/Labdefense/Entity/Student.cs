@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labdefense.Models
+namespace Labdefense.Entity
 {
     public class Student
     {
@@ -21,7 +21,7 @@ namespace Labdefense.Models
 
         public float Test { get; set; }
         public float Finalgrades { get; set; }
-        public float finalgrades()
+        public float FinalGrades()
         {
 
             if (IPar > 30)

@@ -91,7 +91,7 @@
             btnSearch.Size = new Size(29, 29);
             btnSearch.TabIndex = 4;
             btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
+            btnSearch.Click += BtnSearch_Click;
             // 
             // textSearch
             // 
@@ -113,7 +113,7 @@
             btnSave.Size = new Size(33, 29);
             btnSave.TabIndex = 6;
             btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;
+            btnSave.Click += BtnSave_Click;
             // 
             // textP1
             // 

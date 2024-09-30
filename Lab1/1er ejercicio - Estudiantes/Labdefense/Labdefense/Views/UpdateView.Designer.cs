@@ -60,7 +60,7 @@
             btnUpdate.Size = new Size(39, 36);
             btnUpdate.TabIndex = 0;
             btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
+            btnUpdate.Click += BtnUpdate_Click;
             // 
             // texName
             // 

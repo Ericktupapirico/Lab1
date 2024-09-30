@@ -11,7 +11,6 @@
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.102.3" />
     <PackageReference Include="EPPlus" Version="7.3.1" />
-    <PackageReference Include="LiveCharts.WinForms" Version="0.9.7.1" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using Labdefense.Models;
+﻿using Labdefense.Entity;
+using Labdefense.Models;
 using Labdefense.Util;
 using System;
 using System.Collections.Generic;

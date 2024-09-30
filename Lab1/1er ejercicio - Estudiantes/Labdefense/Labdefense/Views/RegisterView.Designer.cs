@@ -202,7 +202,7 @@ namespace Labdefense.Views
             btnRegister.Size = new Size(33, 29);
             btnRegister.TabIndex = 13;
             btnRegister.UseVisualStyleBackColor = true;
-            btnRegister.Click += btnRegister_Click;
+            btnRegister.Click += BtnRegister_Click;
             // 
             // textNumMask
             // 

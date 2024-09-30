@@ -1,4 +1,5 @@
-﻿using Labdefense.Models;
+﻿using Labdefense.Entity;
+using Labdefense.Models;
 using Labdefense.Util;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,8 @@ namespace Labdefense.Views
 {
     public partial class StudentsView : Form
     {
-        private ExportToExcel ExportToExcel;
-        public Student[] students;
+        private readonly ExportToExcel ExportToExcel;
+        public Student[]? students;
         public StudentsView()
         {
 
@@ -36,7 +37,7 @@ namespace Labdefense.Views
             PrintStudents();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
 
             if (dgPrint.SelectedRows.Count == 0)
@@ -68,7 +69,7 @@ namespace Labdefense.Views
             dgPrint.DataSource = ArrayLogic.Arraylog.GetStudents();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
 
         {
 
@@ -88,7 +89,7 @@ namespace Labdefense.Views
             updateView.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             var Carnet = textSearch.Text;
             var _students = ArrayLogic.Arraylog.SearchStudentByCarnet(Carnet);
@@ -109,7 +110,7 @@ namespace Labdefense.Views
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             SaveFileDialog dlg = new SaveFileDialog()
             {

@@ -1,4 +1,5 @@
-﻿using Labdefense.Models;
+﻿using Labdefense.Entity;
+using Labdefense.Models;
 using Labdefense.Util;
 using System;
 using System.Collections.Generic;
@@ -76,7 +77,7 @@ namespace Labdefense.Views
 
 
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void BtnRegister_Click(object sender, EventArgs e)
         {
 
             TextBox[] textBoxes = { textCarnet, textSurname, textName, textIdentification };
@@ -110,20 +111,6 @@ namespace Labdefense.Views
 
         }
 
-        private void textName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void dgStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
     }
 }

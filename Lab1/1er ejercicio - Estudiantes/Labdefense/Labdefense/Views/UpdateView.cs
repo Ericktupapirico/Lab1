@@ -1,4 +1,4 @@
-﻿using Labdefense.Models;
+﻿using Labdefense.Entity;
 using Labdefense.Util;
 using System;
 using System.Collections.Generic;
@@ -17,9 +17,9 @@ namespace Labdefense.Views
     public partial class UpdateView : Form
 
     {
-        private Validations validations;
-        public event Action OnDataUpdate;
-        private Student student;
+        private readonly Validations validations;
+        public event Action OnDataUpdate = delegate { };
+        private readonly Student student;
         public UpdateView(Student _student)
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace Labdefense.Views
                 texName.Text = student.Name;
                 textSurname.Text = student.Surname;
                 textCarnet.Text = student.Carnet;
-                dateTimePicker1.Value = (DateTime)student.DateRegister;
+                dateTimePicker1.Value = student.DateRegister ?? student.DateRegister.Now;
                 textNum.Text = student.Number;
                 texPar1.Text = student.IPar.ToString();
                 textPar2.Text = student.IIPar.ToString();
@@ -47,12 +47,8 @@ namespace Labdefense.Views
                 textTest.Text = student.Test.ToString();
             }
         }
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
+  
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             TextBox[] textBoxes = { textCarnet, textNum, textSurname, texName, textIdentification, texPar1, textPar2, textPro, textTest };
             TextBox[] textBid = { textIdentification };
@@ -87,38 +83,10 @@ namespace Labdefense.Views
                 student.Test = float.Parse(textTest.Text);
 
             }
-            OnDataUpdate.Invoke();
+            OnDataUpdate?.Invoke();
             this.Close();
         }
 
-        private void texPar1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void textPar2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void textPro_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void textTest_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void textPro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void texName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+   
     }
 }
