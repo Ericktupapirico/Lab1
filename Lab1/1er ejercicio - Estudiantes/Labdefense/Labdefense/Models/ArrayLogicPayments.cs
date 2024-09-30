@@ -63,7 +63,7 @@ namespace Labdefense.Models
 
         public static bool CanPayment(string Carnet)
         {
-            var StudentExist = ArrayLogic.Arraylog.SearchStudent(Carnet).Length != 0;
+            var StudentExist = ArrayLogic.Arraylog.SearchStudentByCarnet(Carnet).Length != 0;
             return StudentExist;
         }
         public static void AutoFIllCamp(Payments payments)
@@ -76,7 +76,7 @@ namespace Labdefense.Models
         
             if (!string.IsNullOrEmpty(payments.Carnet))
             {
-                var StudentFills = ArrayLogic.Arraylog.SearchStudent(payments.Carnet).FirstOrDefault();
+                var StudentFills = ArrayLogic.Arraylog.SearchStudentByCarnet(payments.Carnet).FirstOrDefault();
 
                 if (StudentFills != null)
                 {

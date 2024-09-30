@@ -75,21 +75,25 @@ namespace Labdefense.Models
             Array.Sort(students, (firstParishion, SecondParishion) => SecondParishion?.Finalgrades.CompareTo(firstParishion?.Finalgrades) ?? 0);
             return true;
         }
-        public Student[] SearchStudent(string carnet)
+        public Student[] SearchStudentByCarnet(string carnet)
         {
-
-            var student = Array.Find(students, e => carnet.Equals(e.Carnet));
-
-
-            return student != null ? [student] : [];
+            return Array.FindAll(students, e => carnet.Equals(e.Carnet)); 
         }
+
+        public Student[] SearchStudentById(string identification)
+        {
+            return Array.FindAll(students, e => identification.Equals(e.Identification)); 
+        }
+
         public bool CarnetUnique(string carnet)
         {
-            return SearchStudent(carnet).Length == 0;
+            return SearchStudentByCarnet(carnet).Length == 0; 
         }
+
         public bool IdtUnique(string identification)
         {
-            return SearchStudent(identification).Length == 0;
+            return SearchStudentById(identification).Length == 0; 
         }
+
     }
 }
