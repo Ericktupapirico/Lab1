@@ -56,7 +56,7 @@
             btnRegister.Size = new Size(40, 37);
             btnRegister.TabIndex = 27;
             btnRegister.UseVisualStyleBackColor = true;
-            btnRegister.Click += btnRegister_Click;
+            btnRegister.Click += BtnRegister_Click;
             // 
             // label6
             // 
@@ -151,7 +151,6 @@
             dgStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgStudents.Size = new Size(1009, 452);
             dgStudents.TabIndex = 15;
-            dgStudents.CellContentDoubleClick += dgStudents_CellContentDoubleClick;
             // 
             // textCordobas
             // 
@@ -172,7 +171,7 @@
             button1.Size = new Size(40, 37);
             button1.TabIndex = 30;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += Button1_Click;
             // 
             // button2
             // 
@@ -185,7 +184,7 @@
             button2.Size = new Size(40, 37);
             button2.TabIndex = 31;
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += Button2_Click;
             // 
             // comboMotive
             // 

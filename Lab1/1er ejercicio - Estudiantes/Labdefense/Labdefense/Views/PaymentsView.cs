@@ -18,16 +18,12 @@ namespace Labdefense.Views
 
     public partial class PaymentsView : Form
     {
-        private Validations validations;
-        private Payments payments;
-        private Student student;
+        private readonly Validations validations;
+
         public PaymentsView()
         {
             InitializeComponent();
             validations = new Validations();
-            payments = new Payments();
-            student = new Student();
-            textCordobas.KeyPress += new KeyPressEventHandler(validations.ValidateNumberInput);
             comboMotive.SelectedIndex = 0;
             PrintStudents();
         }
@@ -45,7 +41,7 @@ namespace Labdefense.Views
         {
 
             string CarnetPayment = textCarnet.Text;
-            Payments payment = new Payments
+            Payments payment = new()
             {
                 Cordobas = float.Parse(textCordobas.Text),
                 Motive = comboMotive.Text,
@@ -59,11 +55,11 @@ namespace Labdefense.Views
 
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void BtnRegister_Click(object sender, EventArgs e)
         {
 
-            TextBox[] textBoxes = { textCarnet, textCordobas };
-            TextBox[] textCarnetValid = { textCarnet };
+            TextBox[] textBoxes = [textCarnet, textCordobas];
+            TextBox[] textCarnetValid = [textCarnet];
             if (validations.IsValidCarnet(textCarnetValid))
             {
                 MessageBox.Show("Por favor, rellena todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -84,7 +80,7 @@ namespace Labdefense.Views
             PrintStudents();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
 
             if (dgStudents.SelectedRows.Count == 0)
@@ -117,7 +113,7 @@ namespace Labdefense.Views
             --Quantity;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
 
             if (dgStudents.SelectedRows.Count == 0)
@@ -131,16 +127,13 @@ namespace Labdefense.Views
                 MessageBox.Show("No se seleccionado un estudiante", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            UpdatePayView updateViewpay = new UpdatePayView(studentselect);
+            UpdatePayView updateViewpay = new(studentselect);
             updateViewpay.OnDataUpdate += PrintStudents;
             updateViewpay.ShowDialog();
 
         }
 
-        private void dgStudents_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-                }
+ 
             }
         }
 

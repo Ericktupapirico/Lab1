@@ -119,7 +119,7 @@
             btnUpdate.Size = new Size(41, 34);
             btnUpdate.TabIndex = 40;
             btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
+            btnUpdate.Click += BtnUpdate_Click;
             // 
             // UpdatePayView
             // 

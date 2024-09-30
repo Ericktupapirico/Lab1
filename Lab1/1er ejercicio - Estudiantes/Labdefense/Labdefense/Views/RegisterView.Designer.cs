@@ -83,7 +83,7 @@ namespace Labdefense.Views
             dgStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgStudents.Size = new Size(1064, 356);
             dgStudents.TabIndex = 0;
-            dgStudents.CellContentClick += dgStudents_CellContentClick;
+       
             // 
             // textName
             // 
@@ -92,7 +92,7 @@ namespace Labdefense.Views
             textName.Name = "textName";
             textName.Size = new Size(286, 27);
             textName.TabIndex = 1;
-            textName.TextChanged += textName_TextChanged;
+     
             // 
             // textSurname
             // 

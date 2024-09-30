@@ -75,7 +75,7 @@ namespace Labdefense.Views
 
             }
 
-            TextBox[] textBoxes = { textPar2, textP1, textTest, textPro };
+            TextBox[] textBoxes = [textPar2, textP1, textTest, textPro];
             if (validations.TextNullEmpty(textBoxes))
             {
                 MessageBox.Show("Por favor, rellena todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -86,7 +86,7 @@ namespace Labdefense.Views
             studentselect.IIPar = float.Parse(textPar2.Text);
             studentselect.Project = float.Parse(textPro.Text);
             studentselect.Test = float.Parse(textTest.Text);
-            studentselect.Finalgrades = studentselect.Finalgrades();
+            studentselect.Finalgrades = studentselect.FinalGrades();
             ArrayLogic.Arraylog.SaveGrades(studentselect);
             PrintStudents();
 
@@ -98,7 +98,7 @@ namespace Labdefense.Views
             PrintStudents();
         }
 
-        private void textSearch_TextChanged(object sender, EventArgs e)
+        private void TextSearch_TextChanged(object sender, EventArgs e)
         {
 
 

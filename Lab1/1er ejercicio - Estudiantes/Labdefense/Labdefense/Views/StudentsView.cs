@@ -84,7 +84,7 @@ namespace Labdefense.Views
                 MessageBox.Show("No se seleccionado un estudiante", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            UpdateView updateView = new UpdateView(studentselect);
+            UpdateView updateView = new(studentselect);
             updateView.OnDataUpdate += PrintStudents;
             updateView.ShowDialog();
         }
@@ -105,14 +105,11 @@ namespace Labdefense.Views
             }
         }
 
-        private void textSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dlg = new SaveFileDialog()
+            SaveFileDialog dlg = new()
             {
                 Filter = "Excel Files (*.xlsx)|*.xlsx",
                 FileName = "Studets.xlsx"

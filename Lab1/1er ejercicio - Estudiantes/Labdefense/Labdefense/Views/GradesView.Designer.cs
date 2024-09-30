@@ -101,7 +101,7 @@
             textSearch.Name = "textSearch";
             textSearch.Size = new Size(125, 27);
             textSearch.TabIndex = 5;
-            textSearch.TextChanged += textSearch_TextChanged;
+            textSearch.TextChanged += TextSearch_TextChanged;
             // 
             // btnSave
             // 

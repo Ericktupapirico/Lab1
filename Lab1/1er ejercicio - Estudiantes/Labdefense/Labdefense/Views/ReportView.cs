@@ -18,6 +18,7 @@ namespace Labdefense.Views
         public ReportView()
         {
             InitializeComponent();
+            ExportToExcel = new ExportToExcel();
         }
         private void PrintStudents()
         {
@@ -33,9 +34,9 @@ namespace Labdefense.Views
             PrintStudents();
         }
 
-        private void btnExport_Click(object sender, EventArgs e)
+        private void BtnExport_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dlg = new SaveFileDialog()
+            SaveFileDialog dlg = new()
             {
                 Filter = "Excel Files (*.xlsx)|*.xlsx",
                 FileName = "PaymentsReport.xlsx"

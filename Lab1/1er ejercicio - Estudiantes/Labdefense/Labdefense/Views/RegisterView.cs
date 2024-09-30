@@ -53,7 +53,7 @@ namespace Labdefense.Views
                 MessageBox.Show("La cedula ya está registrado. Por favor, ingrese una cedula única.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            Student student = new Student
+            Student student = new()
             {
 
                 Name = textName.Text,
@@ -80,9 +80,9 @@ namespace Labdefense.Views
         private void BtnRegister_Click(object sender, EventArgs e)
         {
 
-            TextBox[] textBoxes = { textCarnet, textSurname, textName, textIdentification };
-            TextBox[] textBid = { textIdentification };
-            TextBox[] _textCarnet = { textCarnet };
+            TextBox[] textBoxes = [textCarnet, textSurname, textName, textIdentification];
+            TextBox[] textBid = [textIdentification];
+            TextBox[] _textCarnet = [textCarnet];
 
             if (validations.IsValidCarnet(_textCarnet))
             {

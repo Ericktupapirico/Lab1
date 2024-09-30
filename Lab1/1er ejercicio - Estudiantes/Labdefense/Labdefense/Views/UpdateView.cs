@@ -26,10 +26,7 @@ namespace Labdefense.Views
             student = _student;
             UpdateInformation();
             validations = new Validations();
-            texPar1.KeyPress += new KeyPressEventHandler(validations.ValidateNumberInput);
-            textPar2.KeyPress += new KeyPressEventHandler(validations.ValidateNumberInput);
-            textPro.KeyPress += new KeyPressEventHandler(validations.ValidateNumberInput);
-            textTest.KeyPress += new KeyPressEventHandler(validations.ValidateNumberInput);
+   
         }
         public void UpdateInformation()
         {
@@ -38,7 +35,7 @@ namespace Labdefense.Views
                 texName.Text = student.Name;
                 textSurname.Text = student.Surname;
                 textCarnet.Text = student.Carnet;
-                dateTimePicker1.Value = student.DateRegister ?? student.DateRegister.Now;
+                dateTimePicker1.Value = student.DateRegister ?? DateTime.Now;
                 textNum.Text = student.Number;
                 texPar1.Text = student.IPar.ToString();
                 textPar2.Text = student.IIPar.ToString();
@@ -50,9 +47,9 @@ namespace Labdefense.Views
   
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            TextBox[] textBoxes = { textCarnet, textNum, textSurname, texName, textIdentification, texPar1, textPar2, textPro, textTest };
-            TextBox[] textBid = { textIdentification };
-            TextBox[] _textCarnet = { textCarnet };
+            TextBox[] textBoxes = [textCarnet, textNum, textSurname, texName, textIdentification, texPar1, textPar2, textPro, textTest];
+            TextBox[] textBid = [textIdentification];
+            TextBox[] _textCarnet = [textCarnet];
 
             if (validations.IsValidCarnet(_textCarnet))
             {
