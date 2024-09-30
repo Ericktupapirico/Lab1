@@ -15,7 +15,7 @@ namespace Labdefense.Views
 {
     public partial class RegisterView : Form
     {
-        private Validations validations;
+        private readonly Validations validations;
 
         public Student? students;
         public RegisterView()
@@ -41,13 +41,13 @@ namespace Labdefense.Views
         void RegisterStudents()
         {
 
-            if (ArrayLogic.Arraylog.SearchStudent(textCarnet.Text).Any())
+            if (!ArrayLogic.Arraylog.CarnetUnique(textCarnet.Text))
             {
                 MessageBox.Show("El carnet ya está registrado. Por favor, ingrese un carnet único.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (ArrayLogic.Arraylog.SearchStudent(textIdentification.Text).Any())
+            if (!ArrayLogic.Arraylog.IdtUnique(textIdentification.Text))
             {
                 MessageBox.Show("La cedula ya está registrado. Por favor, ingrese una cedula única.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

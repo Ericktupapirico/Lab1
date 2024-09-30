@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Labdefense.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,19 +35,6 @@ namespace Labdefense.Models
 
         public Student[] GetStudents()
         {
-            for (int i = 0; i < students.Length; ++i)
-            {
-                for (int j = 0; j < students.Length - i - 1; j++)
-                {
-                    if (students[j].Finalgrades < students[j + 1].Finalgrades)
-                    {
-                        Student BestGrades = students[j];
-                        students[j] = students[j + 1];
-                        students[j + 1] = BestGrades;
-                    }
-                }
-
-            }
             return students;
         }
 
@@ -68,7 +56,7 @@ namespace Labdefense.Models
         public bool UpdateStudent(Student student)
         {
             if (string.IsNullOrEmpty(student.Carnet)) return false;
-            var index = Array.FindIndex(students, s => student.Carnet.Equals(s.Carnet));
+            var index = Array.FindIndex(students, s => student.Carnet.Equals(s?.Carnet));
             if (index < 0) return false;
 
 
@@ -84,23 +72,28 @@ namespace Labdefense.Models
             students[index].IPar = student.IPar;
             students[index].IIPar = student.IIPar;
             students[index].Project = student.Project;
+            Array.Sort(students, (firstParishion, SecondParishion) => SecondParishion?.Finalgrades.CompareTo(firstParishion?.Finalgrades) ?? 0);
             return true;
         }
-        public Student[] SearchStudent(string carnet)
+        public Student[] SearchStudentByCarnet(string carnet)
         {
-
-            var student = Array.Find(students, e => carnet.Equals(e.Carnet));
-
-
-            return student != null ? new[] { student } : Array.Empty<Student>();
+            return Array.FindAll(students, e => carnet.Equals(e.Carnet)); 
         }
+
+        public Student[] SearchStudentById(string identification)
+        {
+            return Array.FindAll(students, e => identification.Equals(e.Identification)); 
+        }
+
         public bool CarnetUnique(string carnet)
         {
-            return SearchStudent(carnet).Length == 0;
+            return SearchStudentByCarnet(carnet).Length == 0; 
         }
+
         public bool IdtUnique(string identification)
         {
-            return SearchStudent(identification).Length == 0;
+            return SearchStudentById(identification).Length == 0; 
         }
+
     }
 }

@@ -91,7 +91,7 @@ namespace Labdefense.Views
         private void button1_Click(object sender, EventArgs e)
         {
             var Carnet = textSearch.Text;
-            var _students = ArrayLogic.Arraylog.SearchStudent(Carnet);
+            var _students = ArrayLogic.Arraylog.SearchStudentByCarnet(Carnet);
 
             if (_students.Length > 0)
             {

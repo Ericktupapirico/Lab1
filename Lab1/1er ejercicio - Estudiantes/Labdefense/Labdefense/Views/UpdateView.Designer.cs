@@ -69,7 +69,7 @@
             texName.Name = "texName";
             texName.Size = new Size(171, 27);
             texName.TabIndex = 1;
-            texName.TextChanged += texName_TextChanged;
+
             // 
             // textNum
             // 
@@ -94,7 +94,7 @@
             textPar2.Name = "textPar2";
             textPar2.Size = new Size(100, 27);
             textPar2.TabIndex = 4;
-            textPar2.KeyPress += textPar2_KeyPress;
+       
             // 
             // textSurname
             // 
@@ -111,8 +111,7 @@
             textPro.Name = "textPro";
             textPro.Size = new Size(100, 27);
             textPro.TabIndex = 6;
-            textPro.TextChanged += textPro_TextChanged;
-            textPro.KeyPress += textPro_KeyPress;
+
             // 
             // texPar1
             // 
@@ -121,7 +120,7 @@
             texPar1.Name = "texPar1";
             texPar1.Size = new Size(100, 27);
             texPar1.TabIndex = 7;
-            texPar1.KeyPress += texPar1_KeyPress;
+      
             // 
             // textCarnet
             // 
@@ -130,7 +129,7 @@
             textCarnet.Name = "textCarnet";
             textCarnet.Size = new Size(171, 27);
             textCarnet.TabIndex = 9;
-            textCarnet.TextChanged += textBox9_TextChanged;
+         
             // 
             // dateTimePicker1
             // 
@@ -147,7 +146,7 @@
             textTest.Name = "textTest";
             textTest.Size = new Size(100, 27);
             textTest.TabIndex = 11;
-            textTest.KeyPress += textTest_KeyPress;
+        
             // 
             // label1
             // 

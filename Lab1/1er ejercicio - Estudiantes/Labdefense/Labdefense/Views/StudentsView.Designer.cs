@@ -90,7 +90,7 @@
             textSearch.Name = "textSearch";
             textSearch.Size = new Size(125, 27);
             textSearch.TabIndex = 2;
-            textSearch.TextChanged += textSearch_TextChanged;
+         
             // 
             // btnDelete
             // 
